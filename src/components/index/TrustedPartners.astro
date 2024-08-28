@@ -1,11 +1,14 @@
 ---
+import Image from "astro/components/Image.astro"
+import nrmaIcon from '../../assets/icons/nrma.svg'
+import alianceIcon from '../../assets/icons/allianz.svg'
 ---
 
 <section id="trusted_partners">
     <h2 id="trusted_partners-title">Trusted Partners</h2>
     <div id="trusted_partner--container">
-        <img src="./icons/nrma.svg" alt="nrma logo">
-        <img src="./icons/allianz.svg" alt="nrma logo">
+        <Image src={nrmaIcon} alt="nrma logo"/>
+        <Image src={alianceIcon} alt="alliance logo"/>
     </div>
 </section>
 
@@ -28,7 +31,7 @@
     }
 
     #trusted_partner--container img{
-        max-height: 25%;
-        max-width: 25%;
+        max-height: 100px;
+        max-width: 100px;
     }
 </style>

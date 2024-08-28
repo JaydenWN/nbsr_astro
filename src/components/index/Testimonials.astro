@@ -1,15 +1,17 @@
 ---
+import Image from "astro/components/Image.astro"
+import starIcon from '../../assets/icons/star.svg'
 ---
 
 <section id="testimonials">
     <h2 id="testimonials_title">Testimonials</h2>
     <fieldset id="testimonials_fieldset">
         <legend>
-            <img src="./icons/star.svg" alt="star imgae">
-            <img src="./icons/star.svg" alt="star">
-            <img src="./icons/star.svg" alt="star">
-            <img src="./icons/star.svg" alt="star">
-            <img src="./icons/star.svg" alt="star">
+            <Image src={starIcon} alt="star icon"/>
+            <Image src={starIcon} alt="star icon"/>
+            <Image src={starIcon} alt="star icon"/>
+            <Image src={starIcon} alt="star icon"/>
+            <Image src={starIcon} alt="star icon"/>
         </legend>
         <p>
             What a fantastic experience.Rebeen and his super helpful team looked after us to fix our broken wing mirror.  The staff from reception to repair were so helpful and friendly.I would recommend them to anyone.
@@ -47,6 +49,7 @@
 
     #testimonials_fieldset legend img{
         max-width: 2em;
+        max-height: 2em;
     }
    
     #testimonials_fieldset--person{

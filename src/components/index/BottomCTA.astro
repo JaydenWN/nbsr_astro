@@ -1,4 +1,6 @@
 ---
+import { Image } from 'astro:assets';
+import phoneIcon from '../../assets/icons/phone.svg'
 ---
 
 <section id="bottom_cta">
@@ -8,7 +10,7 @@
     </div>
     <div id="bottom_cta_buttons">
         <button id="bottom_cta_buttons-quote">Get your quote</button>
-        <button id="bottom_cta_buttons-phone"><img src="./icons/phone.svg" alt="phone icon"></button>
+        <button id="bottom_cta_buttons-phone"><Image src={phoneIcon} alt="phone icon"/></button>
     </div>
 </section>
 
@@ -47,5 +49,6 @@
     }
     #bottom_cta_buttons-phone img{
         max-width: var(--lg);
+        max-height: var(--lg);
     }
 </style>

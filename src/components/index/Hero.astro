@@ -1,8 +1,11 @@
 ---
+import { getImage } from "astro:assets"
+import bgImage from "../../assets/images/car.webp"
+const optimizedBackgroundImage = await getImage({ src: bgImage })
 ---
 
-<header>
-    <div id="hero_content">
+<header style={`background-image: url('${optimizedBackgroundImage.src}'); background-size: cover`}>
+    <div  id="hero_content">
         <h1 id="hero_content_title">SMASH REPAIRS <span>DONE RIGHT</span> EVERY TIME.</h1>
         <p>Quality Workmanship with a Focus on Customer Satisfaction.</p>
     </div>
@@ -15,9 +18,6 @@
         display: flex;
         flex-direction: column;
         gap: var(--xl);
-        background-image: url('./images/car.webp');
-        background-size: cover;
-        background-blend-mode: screen;
     }
     #hero_content_title{
         margin-bottom: var(--sm);

@@ -16,6 +16,8 @@ const { title, body } = Astro.props;
         display: flex;
         flex-direction: column;
         gap: var(--sm);
+        min-height: 150px;
+        font-display: swap;
     }
 
     .our_service_card_title{
@@ -23,6 +25,7 @@ const { title, body } = Astro.props;
         background-color: var(--red);
         max-width: fit-content;
         padding: 0.2rem 0.5rem;
+        min-width: 200px; 
     }
 
     .our_service_card:nth-of-type(even){

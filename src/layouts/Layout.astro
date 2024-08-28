@@ -15,9 +15,6 @@ const { title } = Astro.props;
 		<meta name="description" content="Astro description" />
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="preconnect" href="https://fonts.googleapis.com">
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-		<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&family=Squada+One&display=swap" rel="stylesheet">
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
 	</head>
@@ -28,6 +25,16 @@ const { title } = Astro.props;
 	</body>
 </html>
 <style is:global>
+	@font-face {
+		font-family: 'heading';
+		src: url('/fonts/SquadaOne-Regular.ttf') format('truetype');
+		/* font-display: optional; */
+	}
+	@font-face{
+		font-family: 'paragraph';
+		src: url('/fonts/Orbitron-Regular.ttf') format('truetype');
+        /* font-display: optional; */
+	}
 	:root{
 		/* Site Colors */
 		--black : #0F0F0F;
@@ -42,8 +49,8 @@ const { title } = Astro.props;
 		--xl : 2.5rem;
 
 		/* Site Fonts */
-		--p : "Orbitron", sans-serif;
-		--h : "Squada One", sans-serif;
+		--p : 'paragraph', sans-serif;
+		--h : 'heading', sans-serif;
 
 		/* Defaults */
 		color: white;
