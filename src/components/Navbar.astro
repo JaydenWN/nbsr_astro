@@ -2,9 +2,49 @@
 ---
 
 <nav id="navbar">
-    
+    <h1 id="navbar_title">NBSR</h1>
+    <div id="navbar_controls">
+        <button id="navbar_button--phone">
+            <img src="./icons/phone.svg" alt="phone call button">
+        </button>
+        <button id="navbar_button--burger">
+            <img src="./icons/burger.svg" alt="mobile navigation toggle button">
+        </button>
+    </div>
 </nav>
 
 <style>
+    #navbar{
+        background-color: var(--grey);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: var(--sm);
+    }
 
+    #navbar_title{
+        font-size: 2em;
+    }
+
+    #navbar_button--phone{
+        background-color: transparent;
+        border: 0px;
+        height: 44px;
+        width: 44px;
+    }
+
+    #navbar_button--phone img{
+        max-width: 100%;
+    }
+
+    #navbar_button--burger{
+        background-color: transparent;
+        border: 0px;
+        height: 44px;
+        width: 44px;
+    }
+
+    #navbar_button--burger img{
+        max-width: 100%;
+    }
 </style>
