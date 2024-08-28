@@ -51,4 +51,43 @@ import phoneIcon from '../../assets/icons/phone.svg'
         max-width: var(--lg);
         max-height: var(--lg);
     }
+
+    @media (width >= 756px){
+        #bottom_cta{
+            padding: var(--tb);
+            gap: var(--tb)
+        }
+        #bottom_cta_content_title{
+            font-size: 4em;
+        }
+        #bottom_cta_buttons{
+            align-self: flex-end;
+        }
+    }
+    @media (width >= 1024px){
+        #bottom_cta{
+            padding: var(--lt);
+            gap: var(--lt)
+        }
+        #bottom_cta_buttons-phone{
+            display: none;
+        }
+    }
+    @media (width >= 1440px){
+        #bottom_cta{
+            padding: var(--dt);
+            gap: var(--dt)
+        }
+        #bottom_cta_content{
+            max-width: 70%;
+        }
+    }
+    @media (width >= 1440px){
+        #bottom_cta{
+            padding: var(--fk);
+        }
+        #bottom_cta_content{
+            max-width: 40%;
+        }
+    }
 </style>
