@@ -63,6 +63,16 @@ import phoneIcon from '../../assets/icons/phone.svg'
         #bottom_cta_buttons{
             align-self: flex-end;
         }
+        #bottom_cta_buttons-quote{
+            cursor: pointer;
+            transition: background-color 0.2s ease-in;
+            transition : box-shadow 0.3s ease-out;
+        }
+        #bottom_cta_buttons-quote:hover{
+            background-color: var(--red);
+            box-shadow: 0px 0px 0px 3px white;
+        }
+
     }
     @media (width >= 1024px){
         #bottom_cta{
@@ -76,7 +86,6 @@ import phoneIcon from '../../assets/icons/phone.svg'
     @media (width >= 1440px){
         #bottom_cta{
             padding: var(--dt);
-            gap: var(--dt)
         }
         #bottom_cta_content{
             max-width: 70%;
