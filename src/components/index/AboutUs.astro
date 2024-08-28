@@ -27,4 +27,39 @@
         text-align: center;
         font-size: 1.5rem;
     }
+    @media (width >= 768px){
+        #about{
+            padding: var(--tb);
+        }
+        #about_fieldset{
+            padding: var(--tb)
+        }
+        #about_fieldset--legend{
+            font-size: 2em;
+        }
+    }
+    @media (width >= 1024px){
+        #about{
+            padding: var(--lt)
+        }
+        #about_fieldset{
+            padding: var(--lt)
+        }
+    }
+    @media (width >= 1440px){
+        #about{
+            padding: var(--fk);
+            display: flex;
+            justify-content: center;
+        }
+        #about_fieldset{
+            max-width: 50%;
+            padding: var(--lt)
+        }
+    }
+    @media (width >= 2560px){
+        #about_fieldset{
+            max-width: 35%;
+        }
+    }
 </style>
