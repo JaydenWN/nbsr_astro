@@ -36,4 +36,36 @@ import OurServiceCard from "./OurService_Card.astro";
         flex-direction: column;
         gap: var(--lg);
     }
+    @media (width >= 768px){
+        #services{
+            padding: var(--tb);
+            gap: var(--tb)
+        }
+        #services_title{
+            font-size: 3em;
+        }
+    }
+    @media (width >= 1024px){
+        #services{
+            padding: var(--lt);
+            gap: var(--lt);
+        }
+        #services_container{
+            flex-direction: row;
+            gap: var(--lt);
+            flex-flow: wrap;
+            justify-content: center;
+        }
+    }
+    @media (width >= 1440px){
+        #services{
+            padding: var(--dt);
+            gap: var(--dt);
+        }
+    }
+    @media (width >= 2560px){
+        #services{
+            padding: var(--dt) var(--fk);
+        }
+    }
 </style>

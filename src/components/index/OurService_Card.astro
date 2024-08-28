@@ -34,4 +34,43 @@ const { title, body } = Astro.props;
     .our_service_card:nth-of-type(even) h3{
         align-self: end;
     }
+    @media (width >= 768px){
+        .our_service_card{
+            max-width: calc(50%);
+            
+        }
+        .our_service_card:nth-last-of-type(even){
+            align-self: end;
+        }
+
+    }
+    @media (width >= 1024px){
+        .our_service_card{
+            max-width: calc(50% - var(--tb));
+            text-align: c;
+        }
+        .our_service_card:nth-last-of-type(even){
+            align-self: end;
+            text-align: left;
+        }
+        .our_service_card:nth-of-type(even) h3, h3{
+            align-self: center;
+            text-align: center;
+        }
+       .our_service_card_title{
+            min-width: 100%;
+       }
+    }
+    @media (width >= 1440px){
+        .our_service_card{
+            max-width: calc(100% / 3);
+            
+        }        
+    }
+    @media (width >= 2560px){
+        .our_service_card{
+            max-width: calc(calc(100% / 3) - var(--dt));
+            
+        }        
+    }
 </style>
