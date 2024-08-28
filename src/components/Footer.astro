@@ -1,0 +1,63 @@
+---
+---
+<footer>
+    <div id="footer_content">
+        <div class="footer_links">
+            <p>Socials</p>
+            <ul>
+                <li><a href="">Facebook</a></li>
+                <li><a href="">LinkedIn</a></li>
+            </ul>
+        </div>
+        
+        <div class="footer_links">
+            <p>Site Links</p>
+            <ul>
+                <li><a href="">About</a></li>
+                <li><a href="">Services</a></li>
+                <li><a href="">Reviews</a></li>
+            </ul>
+        </div>
+    </div>
+    <p id="beachside">Designed and developed by beachside web designs.</p>
+</footer>
+
+<style>
+    footer{
+        display: flex;
+        flex-direction: column;
+        padding: var(--lg);
+        gap: var(--lg);
+        background-color: var(--grey);
+        border-top: 1px solid var(--red);
+        color: rgb(104, 100, 100)
+    }
+  
+    #footer_content{
+        display: flex;
+        justify-content: space-between;
+
+    }
+    .footer_links{
+        display: flex;
+        flex-direction: column;
+        gap: var(--sm);
+    }
+    .footer_links ul{
+        display: flex;
+        flex-direction: column;
+        gap: var(--sm)
+    }
+    .footer_links ul a{
+        text-decoration: none;
+        color: inherit;
+    }
+    .footer_links p{
+        font-weight: 700;
+        text-decoration: underline;
+    }
+    #beachside{
+        text-align: center;
+        font-size: 0.7em;
+    }
+</style>
