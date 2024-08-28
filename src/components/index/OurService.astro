@@ -1,0 +1,39 @@
+---
+import OurServiceCard from "./OurService_Card.astro";
+
+
+---
+<main id="services">
+    <h2 id="services_title">Our Service</h2>
+    <div id="services_container">
+        <OurServiceCard 
+            title="Panel Beating" 
+            body="Restore Your Vehicle’s Body to Perfection Our expert panel beaters meticulously repair and reshape your vehicle’s body to its original form. From minor dents to major damage, we ensure your car looks as good as new."/>
+        <OurServiceCard 
+            title="SPRAY PAINTING"
+            body="Flawless Paintwork with Precision Our spray painting services deliver a flawless finish, matching the exact color of your vehicle. Using high-quality paints and the latest technology, we restore your car's paintwork to its original luster."/>
+        <OurServiceCard
+            title="INSURANCE REPAIRS"
+            body="Seamless Coordination with Your Insurer We work directly with all major insurance companies to make the repair process as smooth as possible. From submitting claims to completing repairs, we handle everything so you can relax."/>
+    </div>
+</main>
+
+<style>
+    #services{
+        padding: var(--lg);
+        display: flex;
+        flex-direction: column;
+        gap: var(--lg);
+    }
+    
+    #services_title{
+        text-align: center;
+        font-size: 2.5em;
+    }
+
+    #services_container{
+        display: flex;
+        flex-direction: column;
+        gap: var(--lg);
+    }
+</style>

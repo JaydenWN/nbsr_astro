@@ -1,0 +1,34 @@
+---
+interface Props {
+	title: string;
+	body: string;
+}
+
+const { title, body } = Astro.props;
+---
+<div class="our_service_card">
+    <h3 class="our_service_card_title">{title}</h3>
+    <p>{body}</p>
+</div>
+
+<style>
+    .our_service_card{
+        display: flex;
+        flex-direction: column;
+        gap: var(--sm);
+    }
+
+    .our_service_card_title{
+        font-size: 1.5em;
+        background-color: var(--red);
+        max-width: fit-content;
+        padding: 0.2rem 0.5rem;
+    }
+
+    .our_service_card:nth-of-type(even){
+        text-align: right;
+    }
+    .our_service_card:nth-of-type(even) h3{
+        align-self: end;
+    }
+</style>
