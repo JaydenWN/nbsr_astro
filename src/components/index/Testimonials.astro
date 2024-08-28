@@ -1,0 +1,56 @@
+---
+---
+
+<section id="testimonials">
+    <h2 id="testimonials_title">Testimonials</h2>
+    <fieldset id="testimonials_fieldset">
+        <legend>
+            <img src="./icons/star.svg" alt="star">
+            <img src="./icons/star.svg" alt="star">
+            <img src="./icons/star.svg" alt="star">
+            <img src="./icons/star.svg" alt="star">
+            <img src="./icons/star.svg" alt="star">
+        </legend>
+        <p>
+            What a fantastic experience.Rebeen and his super helpful team looked after us to fix our broken wing mirror.  The staff from reception to repair were so helpful and friendly.I would recommend them to anyone.
+        </p>
+        <p id="testimonials_fieldset--person">- Deb G</p>
+    </fieldset>
+</section>
+
+<style>
+    #testimonials{
+        padding: var(--lg);
+        display: flex;
+        flex-direction: column;
+        background-color: var(--grey);
+    }
+
+    #testimonials_title{
+        font-size: 2em;
+        text-align: center;
+    }
+
+    #testimonials_fieldset{
+        border: 1px solid var(--red);
+        display: flex;
+        flex-direction: column;
+        padding: var(--md);
+        text-align: center;
+        gap: var(--sm);
+    }
+
+    #testimonials_fieldset legend{
+        display: flex;
+        padding: var(--sm);
+    }
+
+    #testimonials_fieldset legend img{
+        max-width: 2em;
+    }
+   
+    #testimonials_fieldset--person{
+        align-self: flex-end;
+    }
+
+</style>
