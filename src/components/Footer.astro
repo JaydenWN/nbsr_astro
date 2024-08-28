@@ -60,4 +60,29 @@
         text-align: center;
         font-size: 0.7em;
     }
+    @media (width >= 756px){
+       footer{
+            padding: var(--tb)
+       }
+    }
+    @media (width >= 1024px){
+        footer{
+            padding: var(--tb) var(--lt) 10px;
+        }
+        #footer_content{
+            justify-content: flex-start;
+            gap: var(--tb);
+            margin-bottom: var(--lg)
+        }
+    }
+    @media (width >= 1440px){
+        footer{
+            padding: var(--tb) var(--dt) 10px;
+       }
+    }
+    @media (width >= 1440px){
+        footer{
+            padding: var(--tb) var(--fk) 10px;
+       }
+    }
 </style>
