@@ -28,10 +28,47 @@ import alianceIcon from '../../assets/icons/allianz.svg'
     #trusted_partner--container{
         display: flex;
         justify-content: space-evenly;
+        align-items: center;
     }
 
     #trusted_partner--container img{
         max-height: 100px;
         max-width: 100px;
+    }
+
+    @media (width >= 768px){
+        #trusted_partners{
+            padding: var(--tb)
+        }
+        #trusted_partners-title{
+            font-size: 3em;
+        }
+        #trusted_partner--container img{
+            max-height: 200px;
+            max-width: 200px;
+        }
+    }
+    @media (width >= 1024px){
+        #trusted_partners{
+            padding: var(--lt)
+        }
+      
+        #trusted_partner--container img{
+            max-height: 300px;
+            max-width: 300px;
+        }
+    }
+    @media (width >= 1440px){
+        #trusted_partners{
+            padding: var(--dt)
+        }
+      
+    }
+    @media (width >= 2560px){
+        #trusted_partners{
+            padding: var(--fk)
+        }
+      
+     
     }
 </style>
