@@ -60,4 +60,43 @@ import starIcon from '../../assets/icons/star.svg'
         align-self: flex-end;
     }
 
+    @media (width >= 768px){
+        #testimonials{
+            padding: var(--tb);
+        }
+        #testimonials_title{
+            font-size: 3em;
+        }
+        #testimonials_fieldset{
+            padding: var(--tb)
+        }
+    }
+    @media (width >= 1024px){
+        #testimonials{
+            padding: var(--lt);
+        }
+        #testimonials_fieldset{
+            padding: var(--tb)
+        }
+    }
+    @media (width >= 1440px){
+        #testimonials{
+            padding: var(--dt);
+            display: flex;
+            align-items: center;
+        }
+        #testimonials_fieldset{
+            max-width: 50%;
+            padding: var(--tb)
+        }
+    }
+    @media (width >= 2560px){
+        #testimonials{
+            padding: var(--fk);
+        }
+        #testimonials_fieldset{
+            max-width: 40%;
+        }
+    }
+
 </style>
