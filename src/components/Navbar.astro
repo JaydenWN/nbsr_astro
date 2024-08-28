@@ -15,14 +15,61 @@ import phoneIcon from '../assets/icons/phone.svg'
         </button>
     </div>
 </nav>
+<div id="mobile_menu">
+    <ul>
+        <li><a href="">Contact Us</a></li>
+        <li><a href="">About</a></li>
+        <li><a href="">Services</a></li>
+        <li><a href="">Reviews</a></li>
+    </ul>
+</div>
 
 <style>
+    #mobile_menu{
+        position: fixed;
+        background-color: var(--grey);
+        width: 100%;
+        display: none;
+        transform: translateY(-340px);
+        transition: all 0.2s ease-in-out;
+        z-index: 1;
+    }
+
+    #mobile_menu ul{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        box-shadow: 0px 0px 10px var(--black);
+    }
+
+    #mobile_menu li{
+        width: 100%;
+        text-align: center;
+    }
+
+    #mobile_menu li a{
+        text-decoration: none;
+        color: white;
+        display: block;
+        width: 100vw;
+        padding: var(--md) 0px;
+    }
+
+    #mobile_menu li:nth-of-type(odd){
+        background-color: var(--black);
+    }
+
     #navbar{
         background-color: var(--grey);
         display: flex;
         justify-content: space-between;
         align-items: center;
         padding: var(--sm) var(--lg);
+        position: sticky;
+        top: 0px;
+        width: calc(100vw - var(--lg) - var(--lg));
+        z-index: 2;
     }
 
     #navbar_title{
@@ -54,3 +101,28 @@ import phoneIcon from '../assets/icons/phone.svg'
         max-height: 100%;
     }
 </style>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const mobileMenuBtn = document.getElementById('navbar_button--burger');
+        const mobileMenu = document.getElementById('mobile_menu');
+
+        if (mobileMenuBtn && mobileMenu) {
+            mobileMenuBtn.addEventListener('click', () => {
+                const currentMobileMenuStyle = window.getComputedStyle(mobileMenu);
+
+                if (currentMobileMenuStyle.display !== 'flex') {
+                    mobileMenu.style.display = 'flex';
+                    setTimeout(()=>{
+                        mobileMenu.style.transform = 'translateY(0px)'
+                    }, 1)
+
+                } else {
+                    mobileMenu.style.display = 'none';
+                    mobileMenu.style.transform = 'translateY(-340px)'
+
+                }
+            });
+        }
+    });
+</script>
