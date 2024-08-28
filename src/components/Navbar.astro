@@ -20,19 +20,19 @@ import phoneIcon from '../assets/icons/phone.svg'
 
     <div id="navbar_controls--desktop">
         <ul>
-            <li><a>Services</a></li>
-            <li><a>About</a></li>
-            <li><a>Reviews</a></li>
-            <li><a>Contact</a></li>
+            <li><a href="/404">Services</a></li>
+            <li><a href="/404">About</a></li>
+            <li><a href="/404">Reviews</a></li>
+            <li><a href="/404">Contact</a></li>
         </ul>
     </div>
 </nav>
 <div id="mobile_menu">
     <ul>
-        <li><a href="">Contact Us</a></li>
-        <li><a href="">About</a></li>
-        <li><a href="">Services</a></li>
-        <li><a href="">Reviews</a></li>
+        <li><a href="/404">Contact Us</a></li>
+        <li><a href="/404">About</a></li>
+        <li><a href="/404">Services</a></li>
+        <li><a href="/404">Reviews</a></li>
     </ul>
 </div>
 
@@ -114,8 +114,13 @@ import phoneIcon from '../assets/icons/phone.svg'
     }
 
     #navbar_controls--desktop{
-            display: none;
-        }
+        display: none;
+    }
+    #navbar_controls--desktop a{
+        text-decoration: none;
+        color: white;
+    }
+    
 
     @media (width >= 768px) {
         #navbar{
