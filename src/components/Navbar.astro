@@ -6,13 +6,25 @@ import phoneIcon from '../assets/icons/phone.svg'
 
 <nav id="navbar">
     <p id="navbar_title">NBSR</p>
+    
     <div id="navbar_controls">
         <button id="navbar_button--phone">
-            <Image src={phoneIcon} alt="phone call button" loading='eager'>
+            <a href="tel:+02 9939 1293">
+                <Image src={phoneIcon} alt="phone call button" loading='eager'>
+            </a>
         </button>
         <button id="navbar_button--burger">
-            <Image src={burgerIcon} alt="mobile navigation toggle button" loading='eager'>
+                <Image src={burgerIcon} alt="mobile navigation toggle button" loading='eager'>
         </button>
+    </div>
+
+    <div id="navbar_controls--desktop">
+        <ul>
+            <li><a>Services</a></li>
+            <li><a>About</a></li>
+            <li><a>Reviews</a></li>
+            <li><a>Contact</a></li>
+        </ul>
     </div>
 </nav>
 <div id="mobile_menu">
@@ -68,8 +80,8 @@ import phoneIcon from '../assets/icons/phone.svg'
         padding: var(--sm) var(--lg);
         position: sticky;
         top: 0px;
-        width: calc(100vw - var(--lg) - var(--lg));
         z-index: 2;
+        box-shadow: 0px 0px 10px var(--black);
     }
 
     #navbar_title{
@@ -99,6 +111,49 @@ import phoneIcon from '../assets/icons/phone.svg'
     #navbar_button--burger img{
         max-width: 100%;
         max-height: 100%;
+    }
+
+    #navbar_controls--desktop{
+            display: none;
+        }
+
+    @media (width >= 768px) {
+        #navbar{
+            padding: var(--lg) var(--tb);
+        }
+        #navbar_button--burger{
+            display: none;
+        }
+        #navbar_button--phone{
+            display: none;
+        }
+        #navbar_controls--desktop{
+            display: flex;
+        }
+        #navbar_controls--desktop ul{
+            display: flex;
+            gap: var(--md);
+        }
+        #navbar_controls--desktop ul li{
+            cursor: pointer;
+            padding: 0.5rem;
+            transition: background-color 0.2s ease-in;
+            transition: box-shadow 0.3s ease-out;
+        }
+        #navbar_controls--desktop ul li:hover{
+            background-color: var(--red);
+            box-shadow: 0px 0px 0px 3px white;
+        }
+    }
+    @media (width >= 1024px) {
+        #navbar_controls--desktop ul{
+            gap: var(--lg)
+        }
+    }
+    @media (width >= 1024px) {
+        #navbar_controls--desktop ul{
+            gap: var(--xl)
+        }
     }
 </style>
 
