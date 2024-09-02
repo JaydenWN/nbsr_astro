@@ -1,13 +1,13 @@
 ---
 import { getImage } from "astro:assets"
-import bgImage from "../../assets/images/car.webp"
+import bgImage from "../../assets/images/nbsr_hero.jpg"
 const optimizedBackgroundImage = await getImage({ src: bgImage })
 ---
 
-<header style={`background-image: url('${optimizedBackgroundImage.src}'); background-size: cover`}>
+<header style={`background-image: url('${optimizedBackgroundImage.src}'); background-size: cover;`}>
     <div  id="hero_content">
         <h1 id="hero_content_title">SMASH REPAIRS <span>DONE RIGHT</span> EVERY TIME.</h1>
-        <p>Quality Workmanship with a Focus on Customer Satisfaction.</p>
+        <p id="hero_content_text">Quality Workmanship with a Focus on Customer Satisfaction.</p>
     </div>
     <button id="hero_content_button">Contact Us</button>
 </header>
@@ -21,12 +21,16 @@ const optimizedBackgroundImage = await getImage({ src: bgImage })
     }
     #hero_content_title{
         margin-bottom: var(--sm);
+        text-shadow: var(--black) 2px 2px 4px;
         font-size: 3em;
     }
     #hero_content_title span{
         background-color: var(--red);
         padding: 3px 6px;
         display: inline-block;
+    }
+    #hero_content_text{
+        text-shadow: var(--black) 2px 2px 4px;
     }
     #hero_content_button{
         background-color: var(--red);
