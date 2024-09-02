@@ -5,7 +5,9 @@ import phoneIcon from '../assets/icons/phone.svg'
 ---
 
 <nav id="navbar">
-    <p id="navbar_title">NBSR</p>
+    <p id="navbar_title">
+        <a href="./">NBSR</a>
+    </p>
     
     <div id="navbar_controls">
         <button id="navbar_button--phone">
@@ -21,15 +23,15 @@ import phoneIcon from '../assets/icons/phone.svg'
     <div id="navbar_controls--desktop">
         <ul>
             <li><a href="/404">Services</a></li>
-            <li><a href="/404">About</a></li>
-            <li><a href="/404">Contact</a></li>
+            <li><a href="./about">About</a></li>
+            <li><a href="./contact">Contact</a></li>
         </ul>
     </div>
 </nav>
 <div id="mobile_menu">
     <ul>
-        <li><a href="/404">Contact Us</a></li>
-        <li><a href="/404">About</a></li>
+        <li><a href="./contact">Contact Us</a></li>
+        <li><a href="./about">About</a></li>
         <li><a href="/404">Services</a></li>
     </ul>
 </div>
@@ -85,6 +87,11 @@ import phoneIcon from '../assets/icons/phone.svg'
     #navbar_title{
         font-family: var(--h);
         font-size: 2em;
+    }
+
+    #navbar_title a{
+        text-decoration: none;
+        color: white;
     }
 
     #navbar_button--phone{
