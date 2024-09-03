@@ -1,0 +1,37 @@
+---
+import ServiceCard from "./ServiceCard.astro"
+import pannelBeatingImg from '../../assets/images/car_aligner.jpg'
+import sprayBoothImg from '../../assets/images/spray booth.jpg'
+import facilitiesImg from '../../assets/images/facilities.jpg'
+---
+
+
+<section id="services">
+    <ServiceCard
+        title="Panel Beating"
+        text="Restore Your Vehicle’s Body to Perfection Our expert panel beaters meticulously repair and reshape your vehicle’s body to its original form. From minor dents to major damage, we ensure your car looks as good as new."
+        img={pannelBeatingImg}
+        imgAlt="Panel beating a car"/>
+
+    <ServiceCard
+        title="Spray Painting"
+        text="Flawless Paintwork with Precision Our spray painting services deliver a flawless finish, matching the exact color of your vehicle. Using high-quality paints and the latest technology, we restore your car's paintwork to its original luster."
+        img={sprayBoothImg}
+        imgAlt="Spray booth at northern beaches smash repairs"/>
+
+    <ServiceCard
+        title="Insurance Repairs"
+        text="Seamless Coordination with Your Insurer We work directly with all major insurance companies to make the repair process as smooth as possible. From submitting claims to completing repairs, we handle everything so you can relax."
+        img={facilitiesImg}
+        imgAlt="Insurance repairs at northern beaches smash repairs"/>
+</section>
+
+<style>
+    #services{
+        background-color: var(--grey);
+        padding: var(--lg);
+        display: flex;
+        flex-direction: column;
+        gap: var(--lg);
+    }
+</style>
