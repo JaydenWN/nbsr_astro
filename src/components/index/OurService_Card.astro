@@ -36,17 +36,20 @@ const { title, body } = Astro.props;
     @media (width >= 768px){
         .our_service_card{
             max-width: calc(50%);
-            
         }
         .our_service_card:nth-last-of-type(even){
             align-self: end;
+
         }
 
     }
     @media (width >= 1024px){
         .our_service_card{
             max-width: calc(50% - var(--tb));
-            text-align: c;
+            min-height: 437px;
+        }
+        .our_service_card p{
+            text-align: left;
         }
         .our_service_card:nth-last-of-type(even){
             align-self: end;
@@ -54,7 +57,7 @@ const { title, body } = Astro.props;
         }
         .our_service_card:nth-of-type(even) h3, h3{
             align-self: center;
-            text-align: center;
+            text-align: left;
         }
        .our_service_card_title{
             min-width: 100%;

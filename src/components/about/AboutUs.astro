@@ -1,14 +1,33 @@
 ---
+import { Image } from "astro:assets";
+import headshot from '../../assets/images/placeholder.jpg'
 
 ---
 <section id="about_section">
     <fieldset id="about_us_content">
         <legend id="about_us_title">About Us</legend>
-        <p id="about_us_text">Northern Beaches Smash Repairs was established in 1988. Serving the Northern beaches of Sydney for approximately 25 years. Our aim is to serve the northern beaches area with the highest service and proficiency. As a direct repairer for most major insurance companies, we meet the highest quality standards for vehicle repair and customer satisfaction. Whether it's a small scratch or major collision damage, we provide expert repairs with the personal service you demand.</p>
+        <p id="about_us_text">We at Northern Beaches Smash Repairs (NBSR), have proudly served the Northern Beaches area and beyond since 1988. We are passionately dedicated to placing our clients and their vehicles at the core of all our efforts, catering to both the local community and clients across Sydney.</p>
+        <p id="about_us_text"> Our team at Northern Beaches Smash Repairs is not only devoted but also highly skilled and experienced. Our dedication and expertise ensure exceptional quality to every vehicle we repair.</p>
+        <p id="about_us_text"> Specializing in insurance work for major companies and private repairs of any magnitude, we handle a wide range of services. From minor dents to complete restorations and customized fabrication, we ensure your car leaves our workshop in pristine condition, assuring your satisfaction and joy on the road.</p>
     </fieldset>
+
+    <div id="meet_rabeen">
+        <h2 id="meet_rabeen_title">Meet Rabeen</h2>
+        <Image
+            src={headshot}
+            alt='Rabeen Georges'
+            id='headshot'/>
+        <p>Owner and managing director, Rabeen Georges, is the heart behind Northern Beach Smash Repairs. With almost three decades of experience in the industry, Rabeen leads this family-owned business with a passion for high-quality customer service and satisfaction. Known for his commitment to delivering outstanding work without cutting corners, Rabeen ensures quality control for every vehicle repaired.
+        </p>
+    </div>
 </section>
 
 <style>
+    #headshot{
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+    }
     #about_section{
         padding: var(--lg);
         background-color: var(--grey);
@@ -26,5 +45,18 @@
     }
     #about_us_text{
         text-align: center;
+        margin-top: 24px;
     }
+    #meet_rabeen{
+        display: flex;
+        flex-direction: column;
+        gap: var(--lg);
+        align-items: center;
+        padding: var(--xl) 0px;
+        text-align: center;
+    }
+    #meet_rabeen_title{
+        font-size: 2.5em;
+    }
+    
 </style>
