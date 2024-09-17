@@ -47,6 +47,33 @@ const {img, imgAlt, title, text} = Astro.props
     }
     .service_image{
         width: 100%;
+        height: auto;
+    }
+
+    @media (width >= 768px){
+        .service_card{
+            max-width: 65%;
+        }
+        .service_card:nth-of-type(even){
+            align-self: flex-end;
+        }
+        .service_card:nth-of-type(even) .service_text{
+            text-align: left;
+        }
+        .service_text{
+            max-width: 100%;
+        }
+    }
+    @media (width >= 1024px){
+        .service_card{
+            max-width: 50%;
+        }
+    }
+
+    @media (width >= 1440px){
+        .service_card{
+            max-width: 35%;
+        }
     }
 
 </style>

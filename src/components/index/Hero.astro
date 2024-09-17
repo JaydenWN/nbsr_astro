@@ -1,10 +1,10 @@
 ---
 import { getImage } from "astro:assets"
-import bgImage from "../../assets/images/nbsr_hero.jpg"
+import bgImage from "../../assets/images/nbsr storefront.webp"
 const optimizedBackgroundImage = await getImage({ src: bgImage })
 ---
 
-<header style={`background-image: url('${optimizedBackgroundImage.src}'); background-size: cover;`}>
+<header style={`background-image: url('${optimizedBackgroundImage.src}'); background-size: cover; background-position: center`}>
     <div  id="hero_content">
         <h1 id="hero_content_title">SMASH REPAIRS <span>DONE RIGHT</span> EVERY TIME.</h1>
         <p id="hero_content_text">Quality Workmanship with a Focus on Customer Satisfaction.</p>

@@ -19,9 +19,28 @@ import facilitiesImg from '../../assets/images/facilities.jpg'
         img={sprayBoothImg}
         imgAlt="Spray booth at northern beaches smash repairs"/>
 
+    
     <ServiceCard
-        title="Insurance Repairs"
-        text="Seamless Coordination with Your Insurer We work directly with all major insurance companies to make the repair process as smooth as possible. From submitting claims to completing repairs, we handle everything so you can relax."
+        title="Paintless Dent Removal"
+        text="Got a ding or dent but don’t want to repaint? Our paintless dent removal service is your solution. Using advanced techniques, we work the dents out from behind the panel, leaving your paintwork untouched. It’s quick, efficient, and cost-effective—perfect for those small but annoying dents."
+        img={facilitiesImg}
+        imgAlt="Insurance repairs at northern beaches smash repairs"/>
+    
+    <ServiceCard
+        title="Windscreen Replacement"
+        text="Cracked windscreen? Broken side window? No problem. Our windscreen and glass replacement services ensure that your vision is crystal clear and your vehicle is safe. We work with the best glass suppliers to offer quick, high-quality replacements that meet or exceed safety standards. Drive with peace of mind knowing your car is as secure as ever."
+        img={facilitiesImg}
+        imgAlt="Insurance repairs at northern beaches smash repairs"/>
+    
+    <ServiceCard
+        title="Detailing"
+        text="It’s the little things that make a big difference. Our comprehensive detailing service covers everything from a thorough clean to restoring the finer details of your car's interior and exterior. Whether you need a regular touch-up or a full deep clean, we leave your car looking spotless and showroom ready."
+        img={facilitiesImg}
+        imgAlt="Insurance repairs at northern beaches smash repairs"/>
+    
+    <ServiceCard
+        title="Restoration & Fabrication"
+        text="For classic car enthusiasts or those looking to rebuild a cherished vehicle, our restoration and fabrication services are the answer. We’re passionate about bringing cars back to their original beauty, and with expert craftsmanship, we handle everything from custom bodywork to fine detailing. Your dream car? We’ll help you create it from the ground up."
         img={facilitiesImg}
         imgAlt="Insurance repairs at northern beaches smash repairs"/>
 </section>
@@ -33,5 +52,27 @@ import facilitiesImg from '../../assets/images/facilities.jpg'
         display: flex;
         flex-direction: column;
         gap: var(--lg);
+    }
+    @media (width >= 768px){
+        #services{
+            padding: var(--tb);
+            gap: var(--tb)
+        }
+    }
+    @media (width >= 1024px){
+        #services{
+            padding: var(--lt);
+            gap: var(--lt)
+        }
+    }
+    @media (width >= 1440px){
+        #services{
+            padding: var(--dt);
+        }
+    }
+    @media (width >= 2560px){
+        #services{
+            padding: var(--dt) var(--fk);
+        }
     }
 </style>
