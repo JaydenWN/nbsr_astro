@@ -99,4 +99,49 @@ import shopImg3 from '../../assets/images/pannel beating.jpg'
         border-right: 8px solid var(--dark-red);
     }
 
+    @media (width >= 768px){
+        #the_shop{
+            padding: var(--tb) 0px
+        }
+        #facilities{
+            gap: var(--lt);
+        }
+        .facilities_text{
+            max-width: 60%;
+        }
+        #facilities .facilities_card:nth-of-type(even) .facilities_text{
+            align-self: flex-end;
+        }
+    }
+
+    @media (width >= 1024px){
+        #facilities{
+            gap: var(--dt);
+        }
+        .facilities_text{
+            max-width: 50%;
+        }
+        .shop_image{
+            max-width: 65%;
+        }
+        #last_img{
+            margin-top: var(--lt)
+        }
+    }
+
+    @media (width >= 1440px){
+        .shop_image{
+            max-width: 40%;
+        }
+        .facilities_text{
+            max-width: 40%;
+        }
+    }
+
+    @media (width >= 2560px){
+        .facilities_text{
+            max-width: 30%;
+        }
+   
+    }
 </style>

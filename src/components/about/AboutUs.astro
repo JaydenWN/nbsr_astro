@@ -17,7 +17,7 @@ import headshot from '../../assets/images/placeholder.jpg'
             src={headshot}
             alt='Rabeen Georges'
             id='headshot'/>
-        <p>Owner and managing director, Rabeen Georges, is the heart behind Northern Beach Smash Repairs. With almost three decades of experience in the industry, Rabeen leads this family-owned business with a passion for high-quality customer service and satisfaction. Known for his commitment to delivering outstanding work without cutting corners, Rabeen ensures quality control for every vehicle repaired.
+        <p id="meet_rabeen_text">Owner and managing director, Rabeen Georges, is the heart behind Northern Beach Smash Repairs. With almost three decades of experience in the industry, Rabeen leads this family-owned business with a passion for high-quality customer service and satisfaction. Known for his commitment to delivering outstanding work without cutting corners, Rabeen ensures quality control for every vehicle repaired.
         </p>
     </div>
 </section>
@@ -58,5 +58,51 @@ import headshot from '../../assets/images/placeholder.jpg'
     #meet_rabeen_title{
         font-size: 2.5em;
     }
-    
+    @media (width >= 768px){
+        #about_section{
+            padding: var(--tb);
+        }
+        #about_us_content{
+            padding: var(--sm) var(--xl) var(--xl)
+        }
+        #meet_rabeen{
+            padding: var(--tb)
+        }
+        
+    }
+    @media (width >= 1024px){
+        #about_section{
+            padding: var(--lt);
+        }
+        #about_us_content{
+            max-width: 65%;
+            margin: 0px auto
+        }
+    }
+    @media (width >= 1440px){
+        #about_section{
+            padding: var(--dt)
+        }
+        #about_us_content{
+            max-width: 60%;
+            padding: 0px var(--tb) var(--lg)
+        }
+        #meet_rabeen_text{
+            max-width: 65%;
+        }
+    }
+    @media (width >= 2560px){
+        #about_section{
+            padding: var(--dt) var(--fk)
+        }
+        #about_us_content{
+            max-width: 40%;
+            padding: 0px var(--tb) var(--tb)
+        }
+        #meet_rabeen{
+            padding: var(--dt);
+            max-width: 50%;
+            margin: 0px auto
+        }
+    }
 </style>

@@ -11,9 +11,35 @@ const optimizedBackgroundImage = await getImage({ src: shopHeroImg })
 
 
 <style>
+    #about_us_hero{
+        padding: var(--xl) var(--lg);
+    }
     #about_us_title{
         font-size: 3em;
-        padding: var(--lg);
         text-shadow: var(--black) 2px 2px 4px;
+        max-width: 90%;
+    }
+    @media (width >= 768px){
+        #about_us_hero{
+            padding: var(--tb);
+        }
+        #about_us_title{
+            max-width: 70%;
+        }
+    }
+    @media (width >= 1024px){
+        #about_us_hero{
+            padding: var(--lt)
+        }
+    }
+    @media (width >= 1440px){
+        #about_us_hero{
+            padding: var(--dt)
+        }
+    }
+    @media (width >= 2560px){
+        #about_us_hero{
+            padding: var(--dt) var(--fk)
+        }
     }
 </style>
