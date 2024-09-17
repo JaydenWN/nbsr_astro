@@ -9,8 +9,8 @@ import phoneIcon from '../../assets/icons/phone.svg'
         <p>Don’t let damage keep you off the road any longer. Trust the experts at Northern Beaches Smash Repairs to bring your car back to its best. Whether you need a quick fix or a full restoration, we’re here to help.</p>
     </div>
     <div id="bottom_cta_buttons">
-        <button id="bottom_cta_buttons-quote">Get your quote</button>
-        <button id="bottom_cta_buttons-phone"><a href="tel:+02 9939 1293"><Image src={phoneIcon} alt="phone icon"/></a></button>
+        <a href="/contact/#contact" id="bottom_cta_buttons-quote">Get your quote</a>
+        <a id="bottom_cta_buttons-phone" href="tel:+02 9939 1293"><Image src={phoneIcon} alt="phone icon"/></a>
     </div>
 </section>
 
@@ -31,16 +31,21 @@ import phoneIcon from '../../assets/icons/phone.svg'
     }
     #bottom_cta_buttons{
         align-self: center;
+        align-items: center;
         display: flex;
         gap: var(--sm);
     }
     #bottom_cta_buttons-quote{
+        display: flex;
+        align-items: center;
         border: 1px solid var(--red);
-        padding: var(--md) var(--lg);
+        height: 66px;
+        padding: 0px var(--md);
         background-color: transparent;
         color: white;
         font-family: var(--p);
         text-transform: uppercase;
+        text-decoration: none;
     }
     #bottom_cta_buttons-phone{
         border: 1px solid var(--red);

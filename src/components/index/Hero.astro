@@ -9,7 +9,7 @@ const optimizedBackgroundImage = await getImage({ src: bgImage })
         <h1 id="hero_content_title">SMASH REPAIRS <span>DONE RIGHT</span> EVERY TIME.</h1>
         <p id="hero_content_text">Quality Workmanship with a Focus on Customer Satisfaction.</p>
     </div>
-    <button id="hero_content_button">Contact Us</button>
+    <a id="hero_content_button" href="/contact/#contact">Contact Us</a>
 </header>
 
 <style>
@@ -33,6 +33,7 @@ const optimizedBackgroundImage = await getImage({ src: bgImage })
         text-shadow: var(--black) 2px 2px 4px;
     }
     #hero_content_button{
+        text-decoration: none;
         background-color: var(--red);
         color: white;
         border: 0px;

@@ -5,22 +5,49 @@ import starIcon from '../../assets/icons/star.svg'
 
 <section id="testimonials">
     <h2 id="testimonials_title">Testimonials</h2>
-    <fieldset id="testimonials_fieldset">
-        <legend>
-            <Image src={starIcon} alt="star icon"/>
-            <Image src={starIcon} alt="star icon"/>
-            <Image src={starIcon} alt="star icon"/>
-            <Image src={starIcon} alt="star icon"/>
-            <Image src={starIcon} alt="star icon"/>
-        </legend>
-        <p>
-            What a fantastic experience.Rebeen and his super helpful team looked after us to fix our broken wing mirror.  The staff from reception to repair were so helpful and friendly.I would recommend them to anyone.
-        </p>
-        <p id="testimonials_fieldset--person">- Deb G</p>
-    </fieldset>
+    <div class="embla">
+        <div class="embla__container">
+
+            <div class="embla__slide">
+                <fieldset id="testimonials_fieldset">
+                    <legend>
+                        <Image src={starIcon} alt="star icon"/>
+                        <Image src={starIcon} alt="star icon"/>
+                        <Image src={starIcon} alt="star icon"/>
+                        <Image src={starIcon} alt="star icon"/>
+                        <Image src={starIcon} alt="star icon"/>
+                    </legend>
+                    <p>
+                        What a fantastic experience.Rebeen and his super helpful team looked after us to fix our broken wing mirror.  The staff from reception to repair were so helpful and friendly.I would recommend them to anyone.
+                    </p>
+                    <p id="testimonials_fieldset--person">- Deb G</p>
+                </fieldset>
+            </div>
+
+            <div class="embla__slide">
+                <fieldset id="testimonials_fieldset">
+                    <legend>
+                        <Image src={starIcon} alt="star icon"/>
+                        <Image src={starIcon} alt="star icon"/>
+                        <Image src={starIcon} alt="star icon"/>
+                        <Image src={starIcon} alt="star icon"/>
+                        <Image src={starIcon} alt="star icon"/>
+                    </legend>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut fuga praesentium sed minima, dolore quo sint maiores at ipsum dolores.
+                    </p>
+                    <p id="testimonials_fieldset--person">- Deb 2</p>
+                </fieldset>
+            </div>
+        </div>
+    </div>
+    <p id="fake_icons">. . .</p>
 </section>
 
 <style>
+    #fake_icons{
+        text-align: center;
+    }
     #testimonials{
         padding: var(--lg);
         display: flex;
@@ -59,6 +86,17 @@ import starIcon from '../../assets/icons/star.svg'
     #testimonials_fieldset--person{
         align-self: flex-end;
     }
+    .embla {
+        overflow: hidden;
+    }
+    .embla__container {
+        display: flex;
+    }
+    .embla__slide {
+        margin-right: var(--md);
+        flex: 0 0 100%;
+        min-width: 0;
+    }
 
     @media (width >= 768px){
         #testimonials{
@@ -72,11 +110,20 @@ import starIcon from '../../assets/icons/star.svg'
         }
     }
     @media (width >= 1024px){
+        #fake_icons{
+            visibility: hidden;
+        }
         #testimonials{
             padding: var(--lt);
+            gap: var(--lt)
         }
         #testimonials_fieldset{
             padding: var(--tb)
+        }
+        .embla__slide {
+            margin-right: var(--md);
+            flex: 0 0 calc(50% - var(--md));
+            min-width: 0;
         }
     }
     @media (width >= 1440px){
@@ -100,3 +147,14 @@ import starIcon from '../../assets/icons/star.svg'
     }
 
 </style>
+
+<script>
+    import EmblaCarousel from 'embla-carousel'
+
+    const emblaNode = document.querySelector('.embla')
+    const options = { loop: true }
+    const emblaApi = EmblaCarousel(emblaNode, options)
+
+    console.log(emblaApi.slideNodes()) // Access API
+
+</script>
