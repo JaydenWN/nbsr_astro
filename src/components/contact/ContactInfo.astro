@@ -37,4 +37,36 @@
         font-weight: 600;
         margin-bottom: var(--sm);
     }
+    @media (width >= 768px){
+        .contact_information{
+            display: flex;
+            width: 100%;
+        }
+    }
+    @media (width >= 1024px){
+        .contact_information{
+            display: flex;
+            margin: var(--tb);
+            width: auto;
+        }
+    }
+    @media (width >= 1440px){
+        .contact_information{
+            margin: var(--dt);
+            width: auto;
+            gap: var(--lt)
+        }
+        .contact_container{
+           width: 30%;
+           padding: var(--xl);
+           margin: 0px auto;
+        }
+    }
+    @media (width >= 2560px){
+
+        .contact_container{
+           width: 15%;
+           justify-content: space-around;
+        }
+    }
 </style>
