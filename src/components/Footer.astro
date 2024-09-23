@@ -1,12 +1,14 @@
 ---
+import Image from "astro/components/Image.astro";
+import bswd from '../assets/images/bswd.png'
 ---
 <footer>
     <div id="footer_content">
         <div class="footer_links">
             <p>Socials</p>
             <ul>
-                <li><a href="http://www.facebook.com">Facebook</a></li>
-                <li><a href="http://www.linkedin.com">LinkedIn</a></li>
+                <li><a href="https://www.facebook.com/profile.php?id=100057514327147">Facebook</a></li>
+                <li><a href="https://www.instagram.com/northern_beaches_smash_repairs/">Instagram</a></li>
             </ul>
         </div>
         
@@ -15,11 +17,13 @@
             <ul>
                 <li><a href="/about">About</a></li>
                 <li><a href="/services">Services</a></li>
-                <li><a href="/reviews">Reviews</a></li>
             </ul>
         </div>
     </div>
-    <p id="beachside">Designed and developed by beachside web designs.</p>
+    <div id="bswd">
+        <Image src={bswd} alt={'beachside web design logo'}/>
+        <p id="beachside">Designed and developed by <a href="https://www.beachsidewebdesigns.com">beachside web designs.</a></p>
+    </div>
 </footer>
 
 <style>
@@ -59,6 +63,16 @@
     #beachside{
         text-align: center;
         font-size: 0.7em;
+    }
+    #bswd{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: var(--sm)
+    }
+    #bswd a{
+        text-decoration: none;
+        color: var(--white);
     }
     @media (width >= 756px){
        footer{

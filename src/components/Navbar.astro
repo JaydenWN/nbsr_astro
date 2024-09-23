@@ -4,13 +4,16 @@ import burgerIcon from '../assets/icons/burger.svg'
 import phoneIcon from '../assets/icons/phone.svg'
 import { getImage } from "astro:assets"
 import bgImage from "../assets/images/carbon_fiber.png"
+import nbsrLogo from '../assets/images/nbsr_logo.svg'
 const optimizedBackgroundImage = await getImage({ src: bgImage })
 ---
 
 <nav id="navbar" style={`background-image: url('${optimizedBackgroundImage.src}'); background-size: cover; background-blend-mode: overlay`}>
-    <p id="navbar_title">
-        <a href="/">NBSR</a>
-    </p>
+    
+    <a href="/" id="navbar_title">
+        <Image id="nbsrLogo" src={nbsrLogo} alt="northern beaches smash repairs"/>
+    </a>
+    
     
     <div id="navbar_controls">
         <button id="navbar_button--phone">
@@ -40,6 +43,7 @@ const optimizedBackgroundImage = await getImage({ src: bgImage })
 </div>
 
 <style>
+   
     #mobile_menu{
         position: fixed;
         background-color: var(--grey);
@@ -47,7 +51,7 @@ const optimizedBackgroundImage = await getImage({ src: bgImage })
         display: none;
         transform: translateY(-340px);
         transition: all 0.2s ease-in-out;
-        z-index: 1;
+        z-index: 2;
     }
 
     #mobile_menu ul{
@@ -80,10 +84,10 @@ const optimizedBackgroundImage = await getImage({ src: bgImage })
         display: flex;
         justify-content: space-between;
         align-items: center;
-        padding: var(--sm) var(--lg);
+        padding: var(--sm) var(--sm);
         position: sticky;
         top: 0px;
-        z-index: 2;
+        z-index: 5;
         box-shadow: 0px 0px 10px var(--black);
         border-bottom: 1px solid white;
     }
@@ -91,12 +95,15 @@ const optimizedBackgroundImage = await getImage({ src: bgImage })
     #navbar_title{
         font-family: var(--h);
         font-size: 2em;
+        display: flex;
     }
 
-    #navbar_title a{
-        text-decoration: none;
-        color: white;
+    #nbsrLogo{
+        max-width: 176px;
+        max-height: 55px;
     }
+
+
 
     #navbar_button--phone{
         background-color: transparent;
@@ -120,6 +127,9 @@ const optimizedBackgroundImage = await getImage({ src: bgImage })
     #navbar_button--burger img{
         max-width: 100%;
         max-height: 100%;
+    }
+    #navbar_controls{
+        display: flex;
     }
 
     #navbar_controls--desktop{
@@ -162,6 +172,11 @@ const optimizedBackgroundImage = await getImage({ src: bgImage })
     @media (width >= 1024px) {
         #navbar_controls--desktop ul{
             gap: var(--lg)
+        }
+        
+        #nbsrLogo{
+            max-width: 250px;
+            max-height: 55px;
         }
     }
     @media (width >= 1024px) {

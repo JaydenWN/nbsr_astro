@@ -9,7 +9,12 @@
     </div>
     <div id="location_details">
         <p>Northern Beaches Smash Repairs <br>6 Wattle Rd,<br>Brookvale, NSW. 2100</p>
+
+        <div>
+            Open 8:00am - 4:30pm, Monday to Friday.
+        </div>
     </div>
+    
 </div>
 
 <style>
@@ -30,6 +35,10 @@
     #location_details{
         border: 1px solid var(--dark-red);
         padding: var(--sm);
+        display: flex;
+        flex-direction: column;
+        gap: var(--md);
+        line-height: 2em;
     }
     @media (width >= 768px){
         #visit_us{

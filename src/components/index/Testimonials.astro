@@ -1,6 +1,7 @@
 ---
 import Image from "astro/components/Image.astro"
 import starIcon from '../../assets/icons/star.svg'
+import rightArrow from '../../assets/icons/right_arrow.svg'
 ---
 
 <section id="testimonials">
@@ -41,12 +42,17 @@ import starIcon from '../../assets/icons/star.svg'
             </div>
         </div>
     </div>
-    <p id="fake_icons">. . .</p>
+    <div id="fake_icons">Slide <Image src={rightArrow} alt="arrow pointing right"></div>
 </section>
 
 <style>
     #fake_icons{
-        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: var(--sm);
+        opacity: 0.3;
+        margin-top: var(--sm);
     }
     #testimonials{
         padding: var(--lg);
