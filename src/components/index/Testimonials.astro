@@ -153,14 +153,18 @@ import rightArrow from '../../assets/icons/right_arrow.svg'
     }
 
 </style>
-
-<script is:inline>
+<script>
     import EmblaCarousel from 'embla-carousel'
-
-    const emblaNode = document.querySelector('.embla')
+    
+    const emblaNode = document.querySelector('.embla') as HTMLElement
     const options = { loop: true }
-    const emblaApi = EmblaCarousel(emblaNode, options)
-
-    console.log(emblaApi.slideNodes()) // Access API
-
+    
+    if (emblaNode) {
+        const emblaApi = EmblaCarousel(emblaNode, options)
+        
+        // Optional: Add any additional carousel functionality here
+        console.log('Embla Carousel initialized:', emblaApi)
+    } else {
+        console.error('Embla carousel container not found')
+    }
 </script>
