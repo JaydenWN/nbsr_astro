@@ -11,7 +11,7 @@ const optimizedBackgroundImage = await getImage({ src: bgImage })
 <nav id="navbar" style={`background-image: url('${optimizedBackgroundImage.src}'); background-size: cover; background-blend-mode: overlay`}>
     
     <a href="/" id="navbar_title">
-        <Image id="nbsrLogo" src={nbsrLogo} alt="northern beaches smash repairs"/>
+        <Image id="nbsrLogo" src={nbsrLogo} alt="northern beaches smash repairs" loading={"eager"}/>
     </a>
     
     
