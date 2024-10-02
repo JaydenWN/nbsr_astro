@@ -1,7 +1,11 @@
 ---
 import ServiceCard from "./ServiceCard.astro"
-import pannelBeatingImg from '../../assets/images/car_aligner.jpg'
-import sprayBoothImg from '../../assets/images/spray booth.jpg'
+import pannelBeatingImg from '../../assets/images/pannel_beating.webp'
+import sprayPainting from '../../assets/images/spray_painting.webp'
+import pdr from '../../assets/images/Paintless_dent_removal.webp'
+import detailing from '../../assets/images/detailing.webp'
+import windscreen from '../../assets/images/windscreen.webp'
+import restoration from '../../assets/images/restoration.webp'
 import facilitiesImg from '../../assets/images/facilities.jpg'
 ---
 
@@ -16,32 +20,32 @@ import facilitiesImg from '../../assets/images/facilities.jpg'
     <ServiceCard
         title="Spray Painting"
         text="Flawless Paintwork with Precision Our spray painting services deliver a flawless finish, matching the exact color of your vehicle. Using high-quality paints and the latest technology, we restore your car's paintwork to its original luster."
-        img={sprayBoothImg}
+        img={sprayPainting}
         imgAlt="Spray booth at northern beaches smash repairs"/>
 
     
     <ServiceCard
         title="Paintless Dent Removal"
         text="Got a ding or dent but don’t want to repaint? Our paintless dent removal service is your solution. Using advanced techniques, we work the dents out from behind the panel, leaving your paintwork untouched. It’s quick, efficient, and cost-effective—perfect for those small but annoying dents."
-        img={facilitiesImg}
+        img={pdr}
         imgAlt="Insurance repairs at northern beaches smash repairs"/>
     
     <ServiceCard
         title="Windscreen Replacement"
         text="Cracked windscreen? Broken side window? No problem. Our windscreen and glass replacement services ensure that your vision is crystal clear and your vehicle is safe. We work with the best glass suppliers to offer quick, high-quality replacements that meet or exceed safety standards. Drive with peace of mind knowing your car is as secure as ever."
-        img={facilitiesImg}
+        img={windscreen}
         imgAlt="Insurance repairs at northern beaches smash repairs"/>
     
     <ServiceCard
         title="Detailing"
         text="It’s the little things that make a big difference. Our comprehensive detailing service covers everything from a thorough clean to restoring the finer details of your car's interior and exterior. Whether you need a regular touch-up or a full deep clean, we leave your car looking spotless and showroom ready."
-        img={facilitiesImg}
+        img={detailing}
         imgAlt="Insurance repairs at northern beaches smash repairs"/>
     
     <ServiceCard
         title="Restoration & Fabrication"
         text="For classic car enthusiasts or those looking to rebuild a cherished vehicle, our restoration and fabrication services are the answer. We’re passionate about bringing cars back to their original beauty, and with expert craftsmanship, we handle everything from custom bodywork to fine detailing. Your dream car? We’ll help you create it from the ground up."
-        img={facilitiesImg}
+        img={restoration}
         imgAlt="Insurance repairs at northern beaches smash repairs"/>
 </section>
 
@@ -51,7 +55,7 @@ import facilitiesImg from '../../assets/images/facilities.jpg'
         padding: var(--lg);
         display: flex;
         flex-direction: column;
-        gap: var(--lg);
+        gap: var(--tb);
     }
     @media (width >= 768px){
         #services{
