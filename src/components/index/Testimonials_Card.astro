@@ -1,0 +1,74 @@
+---
+import Image from "astro/components/Image.astro"
+import starIcon from '../../assets/icons/star.svg'
+const {testimonial, quotee} = Astro.props
+---
+
+<fieldset id="testimonials_fieldset">
+    <legend>
+        <Image src={starIcon} alt="star icon"/>
+        <Image src={starIcon} alt="star icon"/>
+        <Image src={starIcon} alt="star icon"/>
+        <Image src={starIcon} alt="star icon"/>
+        <Image src={starIcon} alt="star icon"/>
+    </legend>
+    <blockquote>
+        {testimonial}
+    </blockquote>
+    <p id="testimonials_fieldset--person">- {quotee}</p>
+</fieldset>
+
+<style>
+
+    #testimonials_fieldset{
+        border: 1px solid var(--red);
+        display: flex;
+        flex-direction: column;
+        padding: var(--md);
+        text-align: center;
+        gap: var(--sm);
+        align-items: center;
+        justify-content: center;
+    }
+    #testimonials_fieldset blockquote{
+        line-height: 2em;
+    }
+    #testimonials_fieldset legend{
+        display: flex;
+        align-self: center;
+        justify-content: center;
+        padding: var(--sm);
+    }
+    
+    #testimonials_fieldset legend img{
+        max-width: 2em;
+        max-height: 2em;
+    }
+   
+    #testimonials_fieldset--person{
+        align-self: flex-end;
+    }
+
+    @media (width >= 768px){
+        #testimonials_fieldset{
+            padding: var(--tb)
+        }
+    }
+
+    @media (width >= 1024px){
+        #testimonials_fieldset{
+            padding: var(--tb)
+        }
+    }
+    @media (width >= 1440px){
+        #testimonials_fieldset{
+            max-width: 476px;
+            margin: 0px auto;
+        }
+    }
+    @media (width >= 2560px){
+        #testimonials_fieldset{
+            max-width: 40%;
+        }
+    }
+</style>
