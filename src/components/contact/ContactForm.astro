@@ -1,8 +1,8 @@
 ---
 ---
-
-<fieldset id="contact">
-    <legend id="contact_title">Contact Us</legend>
+<div id="contact_section">
+<div id="contact">
+    <h2 id="contact_title">Contact Us</h2>
     <form id="contact_form">
         <div class="customer_input">
             <label for="name_input" >Name</label>
@@ -17,12 +17,16 @@
          </div>
         <button id="submit_button">Send</button>
     </form>
-</fieldset>
-
+</div>
+</div>
 
 <style>
+    #contact_section{
+        padding: var(--lg);
+        background-color: var(--off-white);
+    }
     #contact{
-        margin: var(--lg);
+        background-color: var(--red);
         padding: var(--md);
         border: 1px solid var(--dark-red);
     }
@@ -30,16 +34,18 @@
         display: flex;
         flex-direction: column;
         gap: var(--lg);
+        color: #fff
     }
     #contact_title{
         text-align: center;
-        padding: 0px var(--sm);
+        padding-bottom: var(--sm);
         font-family: var(--h);
         text-transform: uppercase;
         font-size: 2em;
+        color: #fff;
     }
     #contact_form input, textarea{
-        border: 1px solid var(--red);
+        border: 1px solid #fff;
         background-color: transparent;
         padding: var(--sm);
         color: white;
@@ -61,7 +67,7 @@
 
     #submit_button{
         border: 0px;
-        background-color: var(--red);
+        background-color: var(--dark-red);
         font-family: var(--p);
         color: white;
         max-width: fit-content;

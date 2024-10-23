@@ -1,6 +1,6 @@
 ---
-import Footer from '../components/Footer.astro';
-import Navbar from '../components/Navbar.astro'
+import Footer from "../components/Footer.astro";
+import Navbar from "../components/Navbar.astro";
 interface Props {
 	title: string;
 }
@@ -32,7 +32,7 @@ const { title } = Astro.props;
 	}
 	@font-face{
 		font-family: 'paragraph';
-		src: url('/fonts/Orbitron-Regular.ttf') format('truetype');
+		src: url('/fonts/OpenSans.ttf') format('truetype');
         /* font-display: optional; */
 	}
 	:root{
@@ -41,6 +41,7 @@ const { title } = Astro.props;
 		--grey : #151515;
 		--red : #E41818;
 		--dark-red : #BB1515;
+		--off-white: #FBF8F8;
 
 		/* Site Spacing */
 		--sm : 1rem;
@@ -57,7 +58,6 @@ const { title } = Astro.props;
 		--h : 'heading', sans-serif;
 
 		/* Defaults */
-		color: white;
 		font-family: var(--p)
 	}
 	
@@ -95,7 +95,6 @@ const { title } = Astro.props;
 	}
 	body {
 		line-height: 1;
-		background-color: var(--black);
 	}
 	ol, ul {
 		list-style: none;

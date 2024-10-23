@@ -1,0 +1,76 @@
+---
+import Image from "astro/components/Image.astro";
+---
+
+<section id="services">
+    <div>
+        <h1>Services</h1>
+    </div>
+    <div class="embla_services">
+        <div class="embla_services_viewport">
+            <div class="embla_services_container">
+                <div class="embla_services_slide">
+
+                    <div class="services_embla_card">
+                        <div>Pannel Beating</div>
+                        <div>
+                            <Image/>
+                            <div>
+                                <p>Restore Your Vehicle’s Body to Perfection, Our expert panel beaters meticulously repair and reshape your vehicle’s body to its original form. From minor dents to major damage, we ensure your car looks as good as new.</p>
+                                
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+    .embla {
+        overflow: hidden;
+    }
+    .embla__container {
+        display: flex;
+    }
+    .embla__slide {
+        flex: 0 0 100%;
+        min-width: 0;
+    }
+</style>
+
+<script>
+    import EmblaCarousel from 'embla-carousel'
+    import AutoPlay from 'embla-carousel-autoplay'
+
+    const emblaNode = document.querySelector('.embla') as HTMLElement
+    const options = { loop: true }
+
+    const viewportNode = emblaNode.querySelector('.embla__viewport')
+    const prevButtonNode = emblaNode.querySelector('.embla__prev')
+    const nextButtonNode = emblaNode.querySelector('.embla__next')
+
+    if (viewportNode) {
+        // Create AutoPlay instance separately
+        const autoPlayInstance = AutoPlay()
+
+        // Initialize EmblaCarousel with AutoPlay
+        const emblaApi = EmblaCarousel(viewportNode as HTMLElement, options, [autoPlayInstance])
+
+        prevButtonNode?.addEventListener('click', () => {
+            emblaApi.scrollPrev();           // Scroll to the previous item
+            autoPlayInstance.stop();          // Stop the autoplay instance
+        }, false);
+
+        nextButtonNode?.addEventListener('click', () => {
+            emblaApi.scrollNext();            // Scroll to the next item
+            autoPlayInstance.stop();          // Stop the autoplay instance
+        }, false);
+
+        console.log('Embla Carousel initialized:', emblaApi)
+    } else {
+        console.error('Embla carousel container not found')
+    }
+</script>

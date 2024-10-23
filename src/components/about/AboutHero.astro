@@ -1,7 +1,7 @@
 ---
-import { getImage } from "astro:assets"
-import shopHeroImg from "../../assets/images/shop_hero.webp"
-const optimizedBackgroundImage = await getImage({ src: shopHeroImg })
+import { getImage } from "astro:assets";
+import shopHeroImg from "../../assets/images/shop_hero.webp";
+const optimizedBackgroundImage = await getImage({ src: shopHeroImg });
 ---
 
 <header id="about_us_hero" style={`background-image: url('${optimizedBackgroundImage.src}'); background-size: cover`}>
@@ -13,6 +13,7 @@ const optimizedBackgroundImage = await getImage({ src: shopHeroImg })
 <style>
     #about_us_hero{
         padding: var(--xl) var(--lg);
+        color: #fff
     }
     #about_us_title{
         font-size: 3em;

@@ -1,7 +1,7 @@
 ---
 import { Image } from "astro:assets";
 
-const {img, imgAlt, title, text} = Astro.props
+const { img, imgAlt, title, text } = Astro.props;
 ---
 
 <div class="service_card">
@@ -19,6 +19,7 @@ const {img, imgAlt, title, text} = Astro.props
         gap: var(--sm);
     }
     .service_title{
+        color: #fff;
         background-color: var(--red);
         max-width: fit-content;
         margin-block: 0px;

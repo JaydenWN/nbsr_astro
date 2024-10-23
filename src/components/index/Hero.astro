@@ -1,7 +1,7 @@
 ---
-import { getImage } from "astro:assets"
-import bgImage from "../../assets/images/nbsr_hero.jpg"
-const optimizedBackgroundImage = await getImage({ src: bgImage })
+import { getImage } from "astro:assets";
+import bgImage from "../../assets/images/nbsr_hero.jpg";
+const optimizedBackgroundImage = await getImage({ src: bgImage });
 ---
 
 <header style={`background-image: url('${optimizedBackgroundImage.src}'); background-size: cover; background-position: center`}>
@@ -18,6 +18,7 @@ const optimizedBackgroundImage = await getImage({ src: bgImage })
         display: flex;
         flex-direction: column;
         gap: var(--xl);
+        color: white;
     }
     #hero_content_title{
         margin-bottom: var(--sm);
@@ -42,7 +43,6 @@ const optimizedBackgroundImage = await getImage({ src: bgImage })
         font-family: var(--p);
         text-transform: uppercase;
         align-self: end;
-        font-weight: 600;
     }
     @media (width >= 768px){
         header{

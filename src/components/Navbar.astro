@@ -1,11 +1,11 @@
 ---
-import Image from "astro/components/Image.astro"
-import burgerIcon from '../assets/icons/burger.svg'
-import phoneIcon from '../assets/icons/phone.svg'
-import { getImage } from "astro:assets"
-import bgImage from "../assets/images/carbon_fiber.png"
-import nbsrLogo from '../assets/images/nbsr_logo_2.svg'
-const optimizedBackgroundImage = await getImage({ src: bgImage })
+import Image from "astro/components/Image.astro";
+import burgerIcon from "../assets/icons/burger.svg";
+import phoneIcon from "../assets/icons/phone.svg";
+import { getImage } from "astro:assets";
+import bgImage from "../assets/images/carbon_fiber.png";
+import nbsrLogo from "../assets/images/nbsr_logo_2.svg";
+const optimizedBackgroundImage = await getImage({ src: bgImage });
 ---
 
 <nav id="navbar" style={`background-image: url('${optimizedBackgroundImage.src}'); background-size: cover; background-blend-mode: overlay`}>
@@ -29,15 +29,16 @@ const optimizedBackgroundImage = await getImage({ src: bgImage })
     <div id="navbar_controls--desktop">
         <ul>
             <li><a href="/services">Services</a></li>
-            <li><a href="./about">About</a></li>
-            <li><a href="./contact">Contact</a></li>
+            <li><a href="/facilities">Facilities</a></li>
+            <li><a href="/about">About</a></li>
+            <li><a href="/contact">Contact</a></li>
         </ul>
     </div>
 </nav>
 <div id="mobile_menu">
     <ul>
-        <li><a href="./contact">Contact Us</a></li>
-        <li><a href="./about">About</a></li>
+        <li><a href="/contact">Contact Us</a></li>
+        <li><a href="/about">About</a></li>
         <li><a href="/services">Services</a></li>
     </ul>
 </div>
@@ -143,7 +144,7 @@ const optimizedBackgroundImage = await getImage({ src: bgImage })
 
     @media (width >= 768px) {
         #navbar{
-            padding: var(--lg) var(--tb);
+            padding: var(--sm) var(--tb);
         }
         #navbar_button--burger{
             display: none;

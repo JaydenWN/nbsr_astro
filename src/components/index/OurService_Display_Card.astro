@@ -1,0 +1,93 @@
+---
+import { Image } from "astro:assets";
+
+const { img, imgAlt, text } = Astro.props;
+---
+
+<div class="embla__slide_services">
+    <div class="service_card">
+        <div class="image_wrap">
+            <div class="overlay"></div>
+            <p>{text}</p>
+            <Image src={img} alt={imgAlt} class="service_image" />
+        </div>
+    </div>
+</div>
+
+<style>
+  .embla__slide_services {
+    flex: 0 0 100%;
+    min-width: 0;
+  }
+
+  .service_card {
+    display: flex;
+    min-height: 465px;
+  }
+
+  .image_wrap {
+    position: relative;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* Dark overlay */
+  .overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      rgba(0, 0, 0, 0.377),
+      rgba(0, 0, 0, 0.048)
+    );
+    z-index: 2;
+  }
+
+  .service_image {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+
+  }
+
+  .image_wrap p {
+    z-index: 3; /* Make sure text is above the overlay */
+    position: absolute;
+    color: white;
+    padding: var(--sm);
+    margin: var(--md);
+    border: 1px solid var(--dark-red);
+    background-color: #0505057c;
+  }
+
+  @media (width >= 768px){
+    .image_wrap p {
+      margin: var(--tb);
+      padding: var(--tb)
+    }
+    .service_card {
+      min-height: 546px;
+    }
+  }
+  @media (width >= 1024px){
+    .image_wrap p {
+      margin: var(--lt);
+      padding: var(--tb);
+    }
+
+  }
+  @media (width >= 1440px){
+    .image_wrap p {
+      margin: var(--lt) var(--dt);
+      padding: var(--tb);
+      max-width: 465px;
+    }
+    .service_card {
+      min-height: 670px;
+    }
+  }
+</style>

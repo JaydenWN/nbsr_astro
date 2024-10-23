@@ -13,17 +13,23 @@
     <fieldset class="contact_container">
         <legend class="contact_title">Email</legend>
         <div class="contact_content">
-            <p class="contact_info">NBSR@email.com</p>
+            <p class="contact_info">rabeen@nbsr.com</p>
             <p class="contact_info_desc">Send us an email for any inquiries or to schedule an appointment. We’ll get back to you as soon as possible.</p>
         </div>
     </fieldset>
 </section>
 
 <style>
+    .contact_information{
+        background-color: var(--off-white);
+        padding: var(--lg);
+        display: flex;
+        flex-direction: column;
+        gap: var(--lg)
+    }
     .contact_container{
         border: 1px solid var(--dark-red);
         padding: var(--sm);
-        margin: var(--lg);
     }
     .contact_title{
         text-align: center;
@@ -39,21 +45,18 @@
     }
     @media (width >= 768px){
         .contact_information{
-            display: flex;
-            width: 100%;
+            flex-direction: row;
+
         }
     }
     @media (width >= 1024px){
         .contact_information{
-            display: flex;
-            margin: var(--tb);
-            width: auto;
+            padding: var(--tb);
         }
     }
     @media (width >= 1440px){
         .contact_information{
-            margin: var(--dt);
-            width: auto;
+            padding: var(--dt);
             gap: var(--lt)
         }
         .contact_container{

@@ -1,16 +1,16 @@
 ---
-import Image from "astro/components/Image.astro"
-import shopImg1 from '../../assets/images/car detailing.jpg'
-import shopImg2 from '../../assets/images/spray booth 2.jpg'
-import shopImg3 from '../../assets/images/pannel beating.jpg'
-import storefront from '../../assets/images/storefront2.webp'
+import Image from "astro/components/Image.astro";
+import shopImg1 from "../../assets/images/car detailing.jpg";
+import shopImg2 from "../../assets/images/spray booth 2.jpg";
+import shopImg3 from "../../assets/images/pannel beating.jpg";
+import storefront from "../../assets/images/storefront2.webp";
 ---
 
 <section id="the_shop">
-    <h3 id="the_shop_title">The Shop</h3>
+    <h3 id="the_shop_title">Our Facilities</h3>
     <div id="facilities">
         <div class="facilities_card">
-            <h4 class="facilities_title">Facilities</h4>
+            <h4 class="facilities_title">Our Shop</h4>
             <Image 
                 src={shopImg1} 
                 alt='Outside northern beaches smash repairs'
@@ -44,7 +44,10 @@ import storefront from '../../assets/images/storefront2.webp'
 
 <style>
     #the_shop{
-        margin: var(--tb) 0px var(--lg) 0px;
+        padding: var(--tb) 0px 0px 0px;
+        background-color: var(--off-white);
+        box-shadow: inset 0 10px 20px -10px rgba(0, 0, 0, 0.192);
+
     }
     #last_img{
         width: 100%;
@@ -62,6 +65,7 @@ import storefront from '../../assets/images/storefront2.webp'
         margin-right: auto;
         padding: 0.25rem var(--sm);
         margin-bottom: var(--tb);
+        color: var(--off-white);
     }
     #facilities{
         display: flex;
@@ -76,9 +80,11 @@ import storefront from '../../assets/images/storefront2.webp'
     }
     .facilities_title{
         font-size: 2em;
-        background-color: var(--dark-red);
+        background-color: var(--red);
         padding: 0.25rem var(--md);
         max-width: fit-content;
+        color: var(--off-white);
+
     }
     #facilities .facilities_card:nth-of-type(even) .facilities_title{
         align-self: flex-end;
@@ -102,7 +108,7 @@ import storefront from '../../assets/images/storefront2.webp'
 
     @media (width >= 768px){
         #the_shop{
-            padding: var(--tb) 0px
+            padding: var(--tb) 0px 0px 0px
         }
         #facilities{
             gap: var(--lt);
