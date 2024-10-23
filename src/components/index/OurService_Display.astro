@@ -144,7 +144,9 @@ import { Image } from "astro:assets";
 
         emblaApi.on('select', () => {
             const currentIndex = emblaApi.selectedScrollSnap();
-            headingElement.textContent = headings[currentIndex];
+            if(headingElement){
+                headingElement.textContent = headings[currentIndex];
+            }
         });
 
         console.log('Embla Carousel initialized:', emblaApi)
