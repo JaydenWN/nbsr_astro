@@ -6,64 +6,56 @@ const { img, imgAlt, title, text } = Astro.props;
 
 <div class="service_card">
     <div class="service_header">
-        <Image src={img} alt={imgAlt} class="service_image"/>
+        <Image src={img} alt={imgAlt} class="service_image" />
         <h2 class="service_title">{title}</h2>
     </div>
     <p class="service_text">{text}</p>
 </div>
 
 <style>
-    .service_card{
+    .service_card {
         display: flex;
         flex-direction: column;
         gap: var(--sm);
     }
-    .service_title{
+    .service_title {
         color: #fff;
         background-color: var(--red);
         max-width: fit-content;
         margin-block: 0px;
         margin: 0px;
         padding: 0.25rem var(--sm);
-        position: absolute;
-        bottom: calc(0.25rem / 2);
-        left: 0px;
-        z-index: 1;
     }
-    .service_header{
-        /* display: flex; */
-        /* flex-direction: column; */
-        position: relative;
-    }
-    .service_image{
+
+    .service_image {
         width: 100%;
         height: auto;
     }
 
-    @media (width >= 768px){
-        .service_card{
+    @media (width >= 768px) {
+        .service_card {
             max-width: 65%;
         }
-        .service_card:nth-of-type(even){
+        .service_card:nth-of-type(even) {
             align-self: flex-end;
         }
-        .service_card:nth-of-type(even) .service_text{
-            text-align: left;
-        }
-        .service_text{
+
+        .service_text {
             max-width: 100%;
         }
     }
-    @media (width >= 1024px){
-        .service_card{
-            max-width: 50%;
+    @media (width >= 1024px) {
+        .service_card {
+            max-width: 45%;
+        }
+        .service_card:nth-of-type(even) {
+            align-self: flex-start;
         }
     }
 
-    @media (width >= 1440px){
-        .service_card{
+    @media (width >= 1440px) {
+        .service_card {
             max-width: 35%;
         }
     }
-
 </style>

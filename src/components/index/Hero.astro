@@ -1,39 +1,45 @@
 ---
 import { getImage } from "astro:assets";
-import bgImage from "../../assets/images/nbsr_hero.jpg";
+import bgImage from "../../assets/images/hero_image_nbsr.webp";
 const optimizedBackgroundImage = await getImage({ src: bgImage });
 ---
 
-<header style={`background-image: url('${optimizedBackgroundImage.src}'); background-size: cover; background-position: center`}>
-    <div  id="hero_content">
-        <h1 id="hero_content_title">SMASH REPAIRS <span>DONE RIGHT</span> EVERY TIME.</h1>
-        <p id="hero_content_text">Quality Workmanship with a Focus on Customer Satisfaction.</p>
+<header
+    style={`background-image: url('${optimizedBackgroundImage.src}'); background-size: cover; background-position: center`}
+>
+    <div id="hero_content">
+        <h1 id="hero_content_title">
+            SMASH REPAIRS <span>DONE RIGHT</span> EVERY TIME.
+        </h1>
+        <p id="hero_content_text">
+            Quality Workmanship with a Focus on Customer Satisfaction.
+        </p>
     </div>
     <a id="hero_content_button" href="/contact/#contact">Contact Us</a>
 </header>
 
 <style>
-    header{
+    header {
         padding: var(--lg);
         display: flex;
         flex-direction: column;
         gap: var(--xl);
         color: white;
     }
-    #hero_content_title{
+    #hero_content_title {
         margin-bottom: var(--sm);
         text-shadow: var(--black) 2px 2px 4px;
         font-size: 3em;
     }
-    #hero_content_title span{
+    #hero_content_title span {
         background-color: var(--red);
         padding: 3px 6px;
         display: inline-block;
     }
-    #hero_content_text{
+    #hero_content_text {
         text-shadow: var(--black) 2px 2px 4px;
     }
-    #hero_content_button{
+    #hero_content_button {
         text-decoration: none;
         background-color: var(--red);
         color: white;
@@ -44,55 +50,55 @@ const optimizedBackgroundImage = await getImage({ src: bgImage });
         text-transform: uppercase;
         align-self: end;
     }
-    @media (width >= 768px){
-        header{
-            padding: var(--tb)
+    @media (width >= 768px) {
+        header {
+            padding: var(--tb);
         }
-        #hero_content{
+        #hero_content {
             max-width: 65%;
         }
-        #hero_content_title{
+        #hero_content_title {
             font-size: 4em;
         }
-        #hero_content p{
+        #hero_content p {
             font-size: 1.5em;
         }
-        #hero_content_button{
+        #hero_content_button {
             cursor: pointer;
             transition: background-color 0.2s ease-in;
             transition: box-shadow 0.3s ease-out;
         }
-        #hero_content_button:hover{
+        #hero_content_button:hover {
             background-color: transparent;
             box-shadow: 0px 0px 0px 3px white;
         }
     }
-    @media (width >= 1024px){
-        header{
-            padding: var(--lt)
+    @media (width >= 1024px) {
+        header {
+            padding: var(--lt);
         }
-        #hero_content_title{
+        #hero_content_title {
             font-size: 5em;
         }
-        #hero_content_button{
+        #hero_content_button {
             margin-top: var(--tb);
             padding: var(--md) var(--lg);
             font-size: 1.5em;
         }
     }
-    @media (width >= 1440px){
-        header{
-            padding: var(--dt)
+    @media (width >= 1440px) {
+        header {
+            padding: var(--dt);
         }
-        #hero_content{
+        #hero_content {
             max-width: 40%;
         }
     }
-    @media (width >= 2560px){
-        header{
-            padding: var(--fk)
+    @media (width >= 2560px) {
+        header {
+            padding: var(--fk);
         }
-        #hero_content{
+        #hero_content {
             max-width: 30%;
         }
     }

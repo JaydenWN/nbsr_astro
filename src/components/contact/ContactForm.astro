@@ -1,71 +1,72 @@
 ---
----
-<div id="contact_section">
-<div id="contact">
-    <h2 id="contact_title">Contact Us</h2>
-    <form id="contact_form">
-        <div class="customer_input">
-            <label for="name_input" >Name</label>
-            <input type="text" name="name" id="name_input" required/>
 
-            <label for="email_input">Email</label>
-            <input type="email" name="email" id="email_input" required/>
-        </div>
-        <div class="customer_input">
-            <label for="message">Your message</label>
-            <textarea maxlength="600" minlength="20" id="message" required/>
-         </div>
-        <button id="submit_button">Send</button>
-    </form>
-</div>
+---
+
+<div id="contact_section">
+    <div id="contact">
+        <h2 id="contact_title">Contact Us</h2>
+        <form id="contact_form">
+            <div class="customer_input">
+                <label for="name_input">Name</label>
+                <input type="text" name="name" id="name_input" required />
+
+                <label for="email_input">Email</label>
+                <input type="email" name="email" id="email_input" required />
+            </div>
+            <div class="customer_input">
+                <label for="message">Your message</label>
+                <textarea maxlength="600" minlength="20" id="message" required
+                ></textarea>
+            </div>
+            <button id="submit_button">Send</button>
+        </form>
+    </div>
 </div>
 
 <style>
-    #contact_section{
+    #contact_section {
         padding: var(--lg);
         background-color: var(--off-white);
     }
-    #contact{
-        background-color: var(--red);
+    #contact {
         padding: var(--md);
         border: 1px solid var(--dark-red);
     }
-    #contact_form{
+    #contact_form {
         display: flex;
         flex-direction: column;
         gap: var(--lg);
-        color: #fff
     }
-    #contact_title{
+    #contact_title {
         text-align: center;
         padding-bottom: var(--sm);
         font-family: var(--h);
         text-transform: uppercase;
         font-size: 2em;
-        color: #fff;
     }
-    #contact_form input, textarea{
-        border: 1px solid #fff;
+    #contact_form input,
+    textarea {
+        border: 1px solid var(--dark-red);
         background-color: transparent;
         padding: var(--sm);
         color: white;
         font-family: var(--p);
     }
-    .customer_input{
+    .customer_input {
         display: flex;
         flex-direction: column;
         gap: var(--sm);
     }
 
-    .customer_input label:nth-last-of-type(odd){
+    .customer_input label:nth-last-of-type(odd) {
         margin-top: var(--sm);
     }
-    
-    #message{
+
+    #message {
         min-height: 250px;
     }
 
-    #submit_button{
+    #submit_button {
         border: 0px;
         background-color: var(--dark-red);
         font-family: var(--p);
@@ -74,27 +75,26 @@
         padding: var(--sm) var(--lg);
         align-self: flex-end;
     }
-    @media (width >= 768px){
-        #contact{
+    @media (width >= 768px) {
+        #contact {
             margin: var(--tb);
-            padding: var(--xl)
+            padding: var(--xl);
         }
     }
-    @media (width >= 1024px){
-        #contact{
+    @media (width >= 1024px) {
+        #contact {
             margin: var(--lt) auto;
             padding: var(--tb);
             max-width: 45%;
         }
-
     }
-    @media (width >= 1440px){
-        #contact{
+    @media (width >= 1440px) {
+        #contact {
             margin: var(--dt) auto;
             padding: var(--tb);
             max-width: 30%;
         }
-        #message{
+        #message {
             min-height: 100px;
         }
     }

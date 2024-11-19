@@ -1,46 +1,47 @@
 ---
 import { getImage } from "astro:assets";
-import shopHeroImg from "../../assets/images/shop_hero.webp";
+import shopHeroImg from "../../assets/images/about_hero.webp";
 const optimizedBackgroundImage = await getImage({ src: shopHeroImg });
 ---
 
-<header id="about_us_hero" style={`background-image: url('${optimizedBackgroundImage.src}'); background-size: cover`}>
-    <h2 id="about_us_title">Northern Beaches Smash Repairs</h2>
+<header
+    id="about_us_hero"
+    style={`background-image: url('${optimizedBackgroundImage.src}'); background-size: cover`}
+>
+    <h2 id="about_us_title">About Northern Beaches Smash Repairs</h2>
 </header>
 
-
-
 <style>
-    #about_us_hero{
+    #about_us_hero {
         padding: var(--xl) var(--lg);
-        color: #fff
+        color: #fff;
     }
-    #about_us_title{
+    #about_us_title {
         font-size: 3em;
         text-shadow: var(--black) 2px 2px 4px;
         max-width: 90%;
     }
-    @media (width >= 768px){
-        #about_us_hero{
+    @media (width >= 768px) {
+        #about_us_hero {
             padding: var(--tb);
         }
-        #about_us_title{
+        #about_us_title {
             max-width: 70%;
         }
     }
-    @media (width >= 1024px){
-        #about_us_hero{
-            padding: var(--lt)
+    @media (width >= 1024px) {
+        #about_us_hero {
+            padding: var(--lt);
         }
     }
-    @media (width >= 1440px){
-        #about_us_hero{
-            padding: var(--dt)
+    @media (width >= 1440px) {
+        #about_us_hero {
+            padding: var(--dt);
         }
     }
-    @media (width >= 2560px){
-        #about_us_hero{
-            padding: var(--dt) var(--fk)
+    @media (width >= 2560px) {
+        #about_us_hero {
+            padding: var(--dt) var(--fk);
         }
     }
 </style>
