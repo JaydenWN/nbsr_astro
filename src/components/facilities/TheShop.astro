@@ -1,9 +1,9 @@
 ---
 import Image from "astro/components/Image.astro";
-import shopImg1 from "../../assets/images/car detailing.jpg";
-import shopImg2 from "../../assets/images/spray booth 2.jpg";
-import shopImg3 from "../../assets/images/pannel beating.jpg";
-import storefront from "../../assets/images/storefront2.webp";
+import shopImg1 from "../../assets/images/the_shop.webp";
+import shopImg2 from "../../assets/images/spray_booth.webp";
+import shopImg3 from "../../assets/images/panel_beating.webp";
+import storefront from "../../assets/images/facilities_end.png";
 ---
 
 <section id="the_shop">
@@ -11,51 +11,81 @@ import storefront from "../../assets/images/storefront2.webp";
     <div id="facilities">
         <div class="facilities_card">
             <h4 class="facilities_title">Our Shop</h4>
-            <Image 
-                src={shopImg1} 
-                alt='Outside northern beaches smash repairs'
-                class='shop_image'/>
-            <p class="facilities_text">Our premise is a two-level building with sections for specific job tasks. Our first level contains the reception, panel shop and spray-painting area Our second level is the undercover secure car park, wash bay and detailing area. Reception also has coffee facilities and rest area for all customers. Our building is secured by 24 hour surveillance cameras and a back to base alarm system.</p>
+            <Image
+                src={shopImg1}
+                alt="Outside northern beaches smash repairs"
+                class="shop_image"
+            />
+            <p class="facilities_text">
+                Our premise is a two-level building with sections for specific
+                job tasks. Our first level contains the reception, panel shop
+                and spray-painting area Our second level is the undercover
+                secure car park, wash bay and detailing area. Reception also has
+                coffee facilities and rest area for all customers. Our building
+                is secured by 24 hour surveillance cameras and a back to base
+                alarm system.
+            </p>
         </div>
 
         <div class="facilities_card">
             <h4 class="facilities_title">SAICO SPRAY BOOTH</h4>
-            <Image 
-                src={shopImg2} 
-                alt='Outside northern beaches smash repairs'
-                class='shop_image'/>
-            <p class="facilities_text">Our State-Of-The-Art painting area consists of a dust-free, ventilated paint-mix room with true lighting to ensure precise colour matching. We use the SAICO booth and baking oven that keep drying temperature at an optimum level. All ventilation incoming and outgoing is filtered to reduce pollution emissions.</p>
+            <Image
+                src={shopImg2}
+                alt="Outside northern beaches smash repairs"
+                class="shop_image"
+            />
+            <p class="facilities_text">
+                Our State-Of-The-Art painting area consists of a dust-free,
+                ventilated paint-mix room with true lighting to ensure precise
+                colour matching. We use the SAICO booth and baking oven that
+                keep drying temperature at an optimum level. All ventilation
+                incoming and outgoing is filtered to reduce pollution emissions.
+            </p>
         </div>
 
         <div class="facilities_card">
             <h4 class="facilities_title">PANEL BEATING</h4>
-            <Image 
-                src={shopImg3} 
-                alt='Outside northern beaches smash repairs'
-                class='shop_image'/>
-            <p class="facilities_text">Equipped with the latest in body realignment equipment and Invertor welders to ensure your vehicle is returned to its original manufacturers specifications. Our electrohydraulic lift is suitable for lifting any type of motor vehicles, with a maximum capacity of 3,000 kg. Chassis realignment can be applied through 360° with the hydraulic pulling column. The measurement system also transforms the bench into a convenient station for diagnosis and repairs.</p>
+            <Image
+                src={shopImg3}
+                alt="Outside northern beaches smash repairs"
+                class="shop_image"
+            />
+            <p class="facilities_text">
+                Equipped with the latest in body realignment equipment and
+                Invertor welders to ensure your vehicle is returned to its
+                original manufacturers specifications. Our electrohydraulic lift
+                is suitable for lifting any type of motor vehicles, with a
+                maximum capacity of 3,000 kg. Chassis realignment can be applied
+                through 360° with the hydraulic pulling column. The measurement
+                system also transforms the bench into a convenient station for
+                diagnosis and repairs.
+            </p>
         </div>
     </div>
-    <Image 
-        src={storefront} 
-        alt='Outside northern beaches smash repairs'
-        id="last_img"/>
+    <Image
+        src={storefront}
+        alt="Outside northern beaches smash repairs"
+        id="last_img"
+    />
 </section>
 
 <style>
-    #the_shop{
+    #the_shop {
         padding: var(--tb) 0px 0px 0px;
         background-color: var(--off-white);
         box-shadow: inset 0 10px 20px -10px rgba(0, 0, 0, 0.192);
-
     }
-    #last_img{
+    #last_img {
         width: 100%;
-        height: auto;
+        height: 230px;
+        object-fit: cover;
         border-top: 1px solid var(--dark-red);
-        border-bottom: 1px solid var(--dark-red); 
+        border-bottom: 1px solid var(--dark-red);
     }
-    #the_shop_title{
+    #last_img img {
+        width: 100%;
+    }
+    #the_shop_title {
         font-size: 3em;
         font-family: var(--h);
         text-align: center;
@@ -67,88 +97,122 @@ import storefront from "../../assets/images/storefront2.webp";
         margin-bottom: var(--tb);
         color: var(--off-white);
     }
-    #facilities{
+    #facilities {
         display: flex;
         flex-direction: column;
         gap: var(--xl);
-        padding-bottom: var(--xl); 
+        padding-bottom: var(--xl);
     }
-    .facilities_card{
+    .facilities_card {
         display: flex;
         flex-direction: column;
         gap: var(--sm);
     }
-    .facilities_title{
+    .facilities_title {
         font-size: 2em;
         background-color: var(--red);
         padding: 0.25rem var(--md);
         max-width: fit-content;
         color: var(--off-white);
-
     }
-    #facilities .facilities_card:nth-of-type(even) .facilities_title{
+    #facilities .facilities_card:nth-of-type(even) .facilities_title {
         align-self: flex-end;
     }
-    #facilities .facilities_card:nth-of-type(even) img{
+    #facilities .facilities_card:nth-of-type(even) img {
         align-self: flex-end;
         border-right: 0px;
         border-left: 8px solid var(--dark-red);
     }
-    #facilities .facilities_card:nth-of-type(even) p{
+    #facilities .facilities_card:nth-of-type(even) p {
         text-align: right;
     }
-    .facilities_text{
-        padding: 0px var(--md)
+    .facilities_text {
+        padding: 0px var(--md);
     }
-    .shop_image{
+    .shop_image {
         max-width: 80%;
         height: auto;
         border-right: 8px solid var(--dark-red);
     }
 
-    @media (width >= 768px){
-        #the_shop{
-            padding: var(--tb) 0px 0px 0px
+    @media (width >= 768px) {
+        #the_shop {
+            padding: var(--tb) 0px 0px 0px;
         }
-        #facilities{
+        #facilities {
             gap: var(--lt);
         }
-        .facilities_text{
+        .facilities_text {
             max-width: 60%;
         }
-        #facilities .facilities_card:nth-of-type(even) .facilities_text{
+        #facilities .facilities_card:nth-of-type(even) .facilities_text {
             align-self: flex-end;
         }
+        #last_img {
+            height: 490px;
+        }
     }
 
-    @media (width >= 1024px){
-        #facilities{
+    @media (width >= 1024px) {
+        #facilities {
             gap: var(--dt);
         }
-        .facilities_text{
+        .facilities_text {
             max-width: 50%;
         }
-        .shop_image{
+        .shop_image {
             max-width: 65%;
         }
-        #last_img{
+        #last_img {
             margin-top: var(--lt);
         }
-    }
-
-    @media (width >= 1440px){
-        .shop_image{
-            max-width: 40%;
-        }
-        .facilities_text{
-            max-width: 40%;
+        #last_img {
+            height: 490px;
         }
     }
 
-    @media (width >= 2560px){
-        .facilities_text{
+    @media (width >= 1440px) {
+        .shop_image {
+            max-width: 40%;
+        }
+        .facilities_text {
+            max-width: 40%;
+        }
+        #last_img {
+            height: 690px;
+        }
+        #facilities {
+            padding: 0px 8em;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .facilities_card {
+            max-width: 35%;
+        }
+        .facilities_text {
+            max-width: 100%;
+            padding: 0px;
+        }
+        .shop_image {
+            max-width: 100%;
+        }
+        #facilities .facilities_card:nth-of-type(even) p {
+            text-align: left;
+        }
+        #facilities .facilities_card:nth-of-type(even) .facilities_title {
+            align-self: baseline;
+        }
+        #facilities .facilities_card:nth-of-type(even) img {
+            align-self: flex-start;
+            border-right: 8px solid var(--dark-red);
+            border-left: 0px;
+        }
+    }
+
+    @media (width >= 2560px) {
+        .facilities_text {
             max-width: 30%;
         }
-   
     }
 </style>
