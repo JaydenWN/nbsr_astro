@@ -6,39 +6,47 @@ import phoneIcon from "../../assets/icons/phone.svg";
 <section id="bottom_cta">
     <div id="bottom_cta_content">
         <h2 id="bottom_cta_content_title">READY TO RESTORE YOUR VEHICLE?</h2>
-        <p>Don’t let damage keep you off the road any longer. Trust the experts at Northern Beaches Smash Repairs to bring your car back to its best. Whether you need a quick fix or a full restoration, we’re here to help.</p>
+        <p>
+            Don’t let damage keep you off the road any longer. Trust the experts
+            at Northern Beaches Smash Repairs to bring your car back to its
+            best. Whether you need a quick fix or a full restoration, we’re here
+            to help.
+        </p>
     </div>
     <div id="bottom_cta_buttons">
-        <a href="/contact/#contact" id="bottom_cta_buttons-quote">Get your quote</a>
-        <a id="bottom_cta_buttons-phone" href="tel:+02 9939 1293"><Image src={phoneIcon} alt="phone icon"/></a>
+        <a href="/contact/#contact" id="bottom_cta_buttons-quote"
+            >Get your quote</a
+        >
+        <a id="bottom_cta_buttons-phone" href="tel:+02 9939 1293"
+            ><Image src={phoneIcon} alt="phone icon" /></a
+        >
     </div>
 </section>
 
 <style>
-    #bottom_cta{
+    #bottom_cta {
         padding: var(--lg);
         display: flex;
         flex-direction: column;
         gap: var(--lg);
         background-color: var(--off-white);
         box-shadow: inset 0 10px 20px -10px rgba(0, 0, 0, 0.192);
-
     }
-    #bottom_cta_content_title{
+    #bottom_cta_content_title {
         font-size: 3em;
     }
-    #bottom_cta_content{
+    #bottom_cta_content {
         display: flex;
         flex-direction: column;
         gap: var(--md);
     }
-    #bottom_cta_buttons{
-        align-self: center;
-        align-items: center;
+    #bottom_cta_buttons {
         display: flex;
+        align-self: flex-end;
+
         gap: var(--sm);
     }
-    #bottom_cta_buttons-quote{
+    #bottom_cta_buttons-quote {
         display: flex;
         align-items: center;
         border: 1px solid var(--red);
@@ -51,61 +59,60 @@ import phoneIcon from "../../assets/icons/phone.svg";
         text-transform: uppercase;
         text-decoration: none;
     }
-    #bottom_cta_buttons-phone{
+    #bottom_cta_buttons-phone {
         border: 1px solid var(--red);
         background-color: var(--red);
         padding: var(--sm);
     }
-    #bottom_cta_buttons-phone img{
+    #bottom_cta_buttons-phone img {
         max-width: var(--lg);
         max-height: var(--lg);
     }
 
-    @media (width >= 756px){
-        #bottom_cta{
+    @media (width >= 756px) {
+        #bottom_cta {
             padding: var(--tb);
-            gap: var(--tb)
+            gap: var(--tb);
         }
-        #bottom_cta_content_title{
+        #bottom_cta_content_title {
             font-size: 4em;
         }
-        #bottom_cta_buttons{
+        #bottom_cta_buttons {
             align-self: flex-end;
         }
-        #bottom_cta_buttons-quote{
+        #bottom_cta_buttons-quote {
             cursor: pointer;
             transition: background-color 0.2s ease-in;
-            transition : box-shadow 0.3s ease-out;
+            transition: box-shadow 0.3s ease-out;
         }
-        #bottom_cta_buttons-quote:hover{
+        #bottom_cta_buttons-quote:hover {
             background-color: var(--red);
             box-shadow: 0px 0px 0px 3px white;
             color: white;
         }
-
     }
-    @media (width >= 1024px){
-        #bottom_cta{
+    @media (width >= 1024px) {
+        #bottom_cta {
             padding: var(--lt);
-            gap: var(--lt)
+            gap: var(--lt);
         }
-        #bottom_cta_buttons-phone{
+        #bottom_cta_buttons-phone {
             display: none;
         }
     }
-    @media (width >= 1440px){
-        #bottom_cta{
+    @media (width >= 1440px) {
+        #bottom_cta {
             padding: var(--dt);
         }
-        #bottom_cta_content{
+        #bottom_cta_content {
             max-width: 70%;
         }
     }
-    @media (width >= 2560px){
-        #bottom_cta{
+    @media (width >= 2560px) {
+        #bottom_cta {
             padding: var(--fk);
         }
-        #bottom_cta_content{
+        #bottom_cta_content {
             max-width: 40%;
         }
     }

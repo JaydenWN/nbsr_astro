@@ -4,10 +4,7 @@ import shopHeroImg from "../../assets/images/about_hero.webp";
 const optimizedBackgroundImage = await getImage({ src: shopHeroImg });
 ---
 
-<header
-    id="about_us_hero"
-    style={`background-image: url('${optimizedBackgroundImage.src}'); background-size: cover`}
->
+<header id="about_us_hero">
     <h2 id="about_us_title">About Northern Beaches Smash Repairs</h2>
 </header>
 
@@ -15,33 +12,36 @@ const optimizedBackgroundImage = await getImage({ src: shopHeroImg });
     #about_us_hero {
         padding: var(--xl) var(--lg);
         color: #fff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: var(--off-white);
     }
     #about_us_title {
+        display: block;
+        text-align: center;
         font-size: 3em;
-        text-shadow: var(--black) 2px 2px 4px;
-        max-width: 90%;
+        background-color: var(--red);
+        padding: 0em 0.2em;
     }
     @media (width >= 768px) {
         #about_us_hero {
             padding: var(--tb);
         }
-        #about_us_title {
-            max-width: 70%;
-        }
     }
     @media (width >= 1024px) {
         #about_us_hero {
-            padding: var(--lt);
+            padding: var(--tb) var(--lt);
         }
     }
     @media (width >= 1440px) {
         #about_us_hero {
-            padding: var(--dt);
+            padding: var(--lt) var(--dt);
         }
     }
     @media (width >= 2560px) {
         #about_us_hero {
-            padding: var(--dt) var(--fk);
+            padding: var(-lt) var(--fk);
         }
     }
 </style>

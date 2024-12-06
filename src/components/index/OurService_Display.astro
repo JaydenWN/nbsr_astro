@@ -1,16 +1,15 @@
 ---
 import pannelBeatingImg from "../../assets/images/pannel_beating_index.jpg";
-import sprayPainting from "../../assets/images/spray_paint_index.jpg";
+import sprayPainting from "../../assets/images/spray_index.png";
 import pdr from "../../assets/images/paintless_dent_removal_index.jpg";
-import detailing from "../../assets/images/detailing.webp";
-import windscreen from "../../assets/images/windscreen_index.jpg";
-import restoration from "../../assets/images/restoration_landing.jpg";
+import detailing from "../../assets/images/detail_index.png";
+import windscreen from "../../assets/images/windscreen.jpg";
+import restoration from "../../assets/images/restore_service.webp";
 import OurServiceDisplayCard from "./OurService_Display_Card.astro";
 import next_icon from "../../assets/icons/next_icon.svg";
 import prev_icon from "../../assets/icons/prev_icon.svg";
 import { Image } from "astro:assets";
 ---
-
 
 <div class="services_display_head">
     <h1>Services</h1>
@@ -19,139 +18,191 @@ import { Image } from "astro:assets";
 
 <div class="embla_services">
     <div class="embla__viewport_services">
-      <div class="embla__container_services">
-        <OurServiceDisplayCard img={pannelBeatingImg} imgAlt="pannel beating service" text="When accidents happen, the last thing you want is to be reminded every time you look at your car. Our panel beating experts bring your vehicle back to life, erasing dents, bumps, and bruises with precision and care. Whether it’s a minor scratch or major damage, we restore your car to its former glory, so it looks just as good—if not better—than before."/>
-        <OurServiceDisplayCard img={sprayPainting} imgAlt="car spray painting service" text="Time for a fresh coat? Our spray painting service doesn’t just cover up imperfections—it enhances your car’s appearance. We use cutting-edge technology and premium paint to seamlessly match your car’s original colour, or if you want to switch things up, we’ll help you find the perfect new shade. Expect a flawless finish that turns heads on every drive."/>
-        <OurServiceDisplayCard img={pdr} imgAlt="paintless dent removal service" text="Got a ding or dent but don’t want to repaint? Our paintless dent removal service is your solution. Using advanced techniques, we work the dents out from behind the panel, leaving your paintwork untouched. It’s quick, efficient, and cost-effective—perfect for those small but annoying dents."/>
-        <OurServiceDisplayCard img={detailing} imgAlt="car detailing service" text="It’s the little things that make a big difference. Our comprehensive detailing service covers everything from a thorough clean to restoring the finer details of your car's interior and exterior. Whether you need a regular touch-up or a full deep clean, we leave your car looking spotless and showroom ready."/>
-        <OurServiceDisplayCard img={windscreen} imgAlt="windscreen repair service" text="Cracked windscreen? Broken side window? No problem. Our windscreen and glass replacement services ensure that your vision is crystal clear and your vehicle is safe. We work with the best glass suppliers to offer quick, high-quality replacements that meet or exceed safety standards. Drive with peace of mind knowing your car is as secure as ever."/>
-        <OurServiceDisplayCard img={restoration} imgAlt="vehicle restoration service" text="For classic car enthusiasts or those looking to rebuild a cherished vehicle, our restoration and fabrication services are the answer. We’re passionate about bringing cars back to their original beauty, and with expert craftsmanship, we handle everything from custom bodywork to fine detailing. Your dream car? We’ll help you create it from the ground up."/>
+        <div class="embla__container_services">
+            <OurServiceDisplayCard
+                img={pannelBeatingImg}
+                imgAlt="pannel beating service"
+                text="When accidents happen, the last thing you want is to be reminded every time you look at your car. Our panel beating experts bring your vehicle back to life, erasing dents, bumps, and bruises with precision and care. Whether it’s a minor scratch or major damage, we restore your car to its former glory, so it looks just as good—if not better—than before."
+            />
+            <OurServiceDisplayCard
+                img={sprayPainting}
+                imgAlt="car spray painting service"
+                text="Time for a fresh coat? Our spray painting service doesn’t just cover up imperfections—it enhances your car’s appearance. We use cutting-edge technology and premium paint to seamlessly match your car’s original colour, or if you want to switch things up, we’ll help you find the perfect new shade. Expect a flawless finish that turns heads on every drive."
+            />
+            <OurServiceDisplayCard
+                img={pdr}
+                imgAlt="paintless dent removal service"
+                text="Got a ding or dent but don’t want to repaint? Our paintless dent removal service is your solution. Using advanced techniques, we work the dents out from behind the panel, leaving your paintwork untouched. It’s quick, efficient, and cost-effective—perfect for those small but annoying dents."
+            />
+            <OurServiceDisplayCard
+                img={detailing}
+                imgAlt="car detailing service"
+                text="It’s the little things that make a big difference. Our comprehensive detailing service covers everything from a thorough clean to restoring the finer details of your car's interior and exterior. Whether you need a regular touch-up or a full deep clean, we leave your car looking spotless and showroom ready."
+            />
+            <OurServiceDisplayCard
+                img={windscreen}
+                imgAlt="windscreen repair service"
+                text="Cracked windscreen? Broken side window? No problem. Our windscreen and glass replacement services ensure that your vision is crystal clear and your vehicle is safe. We work with the best glass suppliers to offer quick, high-quality replacements that meet or exceed safety standards. Drive with peace of mind knowing your car is as secure as ever."
+            />
+            <OurServiceDisplayCard
+                img={restoration}
+                imgAlt="vehicle restoration service"
+                text="For classic car enthusiasts or those looking to rebuild a cherished vehicle, our restoration and fabrication services are the answer. We’re passionate about bringing cars back to their original beauty, and with expert craftsmanship, we handle everything from custom bodywork to fine detailing. Your dream car? We’ll help you create it from the ground up."
+            />
+        </div>
+        <div class="control_group">
+            <button class="embla__prev_services control_btn"
+                ><Image
+                    src={prev_icon}
+                    alt={"previous"}
+                    class="control_icon"
+                /></button
+            >
+            <button class="embla__next_services control_btn"
+                ><Image
+                    src={next_icon}
+                    alt={"next"}
+                    class="control_icon"
+                /></button
+            >
+        </div>
     </div>
-    <div class="control_group">
-        <button class="embla__prev_services control_btn"><Image src={prev_icon} alt={"previous"} class="control_icon"/></button>
-        <button class="embla__next_services control_btn"><Image src={next_icon} alt={"next"} class="control_icon"/></button>
-    </div>
-</div>
-  
-<style>
-.embla_services {
-    overflow: hidden;
-    position: relative;
-}
 
-.embla__container_services {
-    display: flex;
-}
+    <style>
+        .embla_services {
+            overflow: hidden;
+            position: relative;
+        }
 
-.control_btn {
-    background-color: transparent;
-    border: 0px;
-    min-width: 25px;
-    padding: 0px;
-    cursor: pointer;
-}
+        .embla__container_services {
+            display: flex;
+        }
 
-.control_icon {
-    width: 100%;
-    height: auto;
-}
+        .control_btn {
+            background-color: transparent;
+            border: 0px;
+            min-width: 25px;
+            padding: 0px;
+            cursor: pointer;
+        }
 
-.services_display_head {
-    background: var(--red);
-    color: white;
-    padding: var(--lg);
-    font-size: 1.25em;
-    box-shadow: inset 0 10px 20px -10px rgba(0, 0, 0, 0.575);
-}
+        .control_icon {
+            width: 100%;
+            height: auto;
+        }
 
-.dynamic_heading {
-    background-color: var(--dark-red);
-    box-shadow: inset 0 10px 20px -10px rgba(0, 0, 0, 0.103);
-    color: white;
-    text-align: center;
-    padding: var(--sm);
-}
+        .services_display_head {
+            background: var(--red);
+            color: white;
+            padding: var(--lg);
+            font-size: 1.25em;
+            box-shadow: inset 0 10px 20px -10px rgba(0, 0, 0, 0.575);
+        }
 
-.control_group {
-    position: absolute;
-    bottom: var(--md);
-    right: var(--md);
-}
+        .dynamic_heading {
+            background-color: var(--dark-red);
+            box-shadow: inset 0 10px 20px -10px rgba(0, 0, 0, 0.103);
+            color: white;
+            text-align: center;
+            padding: var(--sm);
+        }
 
-@media (width >= 768px) {
-    .services_display_head {
-        padding: var(--xl) var(--tb);
-    }
-    .control_group {
-        left: 50%;
-        transform: translateX(-50%);
-        right: auto;
-        display: flex;
-        gap: var(--md);
-    }
-}
+        .control_group {
+            position: absolute;
+            bottom: var(--md);
+            right: var(--md);
+        }
 
-@media (width >= 1024px) {
-    .services_display_head {
-        padding: var(--xl) var(--lt);
-    }
-}
-
-@media (width >= 1440px) {
-    .services_display_head {
-        padding: var(--xl) var(--dt);
-    }
-}
-</style>  
-
-<script>
-    import EmblaCarousel from 'embla-carousel'
-    import AutoPlay from 'embla-carousel-autoplay'
-    import Fade from 'embla-carousel-fade'
-    const emblaNode = document.querySelector('.embla_services') as HTMLElement
-    const options = { loop: true }
-
-    const viewportNode = emblaNode.querySelector('.embla__viewport_services')
-    const prevButtonNode = emblaNode.querySelector('.embla__prev_services')
-    const nextButtonNode = emblaNode.querySelector('.embla__next_services')
-    const headingElement = document.getElementById('dynamic_heading')
-
-    if (viewportNode) {
-        const headings = [
-            "Pannel Beating",
-            "Spray Painting",
-            "Paintless Dent Removal",
-            "Detailing",
-            "Windscreen Repairs",
-            "Restorations"
-        ];
-
-        // Create AutoPlay instance separately
-        const autoPlayInstance = AutoPlay()
-
-        // Initialize EmblaCarousel with AutoPlay
-        const emblaApi = EmblaCarousel(viewportNode as HTMLElement, options, [autoPlayInstance, Fade()])
-
-        prevButtonNode?.addEventListener('click', () => {
-            emblaApi.scrollPrev();           // Scroll to the previous item
-            autoPlayInstance.stop();          // Stop the autoplay instance
-        }, false);
-
-        nextButtonNode?.addEventListener('click', () => {
-            emblaApi.scrollNext();            // Scroll to the next item
-            autoPlayInstance.stop();          // Stop the autoplay instance
-        }, false);
-
-        emblaApi.on('select', () => {
-            const currentIndex = emblaApi.selectedScrollSnap();
-            if(headingElement){
-                headingElement.textContent = headings[currentIndex];
+        @media (width >= 768px) {
+            .services_display_head {
+                padding: var(--xl) var(--tb);
             }
-        });
+            .control_group {
+                left: 50%;
+                transform: translateX(-50%);
+                right: auto;
+                display: flex;
+                gap: var(--md);
+            }
+        }
 
-        console.log('Embla Carousel initialized:', emblaApi)
-    } else {
-        console.error('Embla carousel container not found')
-    }
+        @media (width >= 1024px) {
+            .services_display_head {
+                padding: var(--xl) var(--lt);
+            }
+        }
 
-</script>
+        @media (width >= 1440px) {
+            .services_display_head {
+                padding: var(--xl) var(--dt);
+            }
+        }
+    </style>
+
+    <script>
+        import EmblaCarousel from "embla-carousel";
+        import AutoPlay from "embla-carousel-autoplay";
+        import Fade from "embla-carousel-fade";
+        const emblaNode = document.querySelector(
+            ".embla_services",
+        ) as HTMLElement;
+        const options = { loop: true };
+
+        const viewportNode = emblaNode.querySelector(
+            ".embla__viewport_services",
+        );
+        const prevButtonNode = emblaNode.querySelector(".embla__prev_services");
+        const nextButtonNode = emblaNode.querySelector(".embla__next_services");
+        const headingElement = document.getElementById("dynamic_heading");
+
+        if (viewportNode) {
+            const headings = [
+                "Pannel Beating",
+                "Spray Painting",
+                "Paintless Dent Removal",
+                "Detailing",
+                "Windscreen Repairs",
+                "Restorations",
+            ];
+
+            // Create AutoPlay instance separately
+            const autoPlayInstance = AutoPlay();
+
+            // Initialize EmblaCarousel with AutoPlay
+            const emblaApi = EmblaCarousel(
+                viewportNode as HTMLElement,
+                options,
+                [autoPlayInstance, Fade()],
+            );
+
+            prevButtonNode?.addEventListener(
+                "click",
+                () => {
+                    emblaApi.scrollPrev(); // Scroll to the previous item
+                    autoPlayInstance.stop(); // Stop the autoplay instance
+                },
+                false,
+            );
+
+            nextButtonNode?.addEventListener(
+                "click",
+                () => {
+                    emblaApi.scrollNext(); // Scroll to the next item
+                    autoPlayInstance.stop(); // Stop the autoplay instance
+                },
+                false,
+            );
+
+            emblaApi.on("select", () => {
+                const currentIndex = emblaApi.selectedScrollSnap();
+                if (headingElement) {
+                    headingElement.textContent = headings[currentIndex];
+                }
+            });
+
+            console.log("Embla Carousel initialized:", emblaApi);
+        } else {
+            console.error("Embla carousel container not found");
+        }
+    </script>
+</div>

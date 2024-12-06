@@ -31,6 +31,7 @@
     #contact {
         padding: var(--md);
         border: 1px solid var(--dark-red);
+        background-color: white;
     }
     #contact_form {
         display: flex;
@@ -74,6 +75,8 @@
         max-width: fit-content;
         padding: var(--sm) var(--lg);
         align-self: flex-end;
+        border: 1px solid transparent;
+        transition: all 0.15s ease-in;
     }
     @media (width >= 768px) {
         #contact {
@@ -86,6 +89,12 @@
             margin: var(--lt) auto;
             padding: var(--tb);
             max-width: 45%;
+        }
+        #submit_button:hover {
+            background-color: white;
+            cursor: pointer;
+            border: 1px solid var(--dark-red);
+            color: black;
         }
     }
     @media (width >= 1440px) {

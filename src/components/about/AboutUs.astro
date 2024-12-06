@@ -44,6 +44,9 @@
     #about_section {
         padding: var(--lg);
         background-color: #fff;
+        display: flex;
+        flex-direction: column;
+        gap: var(--sm);
     }
     #about_us_content {
         border: 1px solid var(--dark-red);
@@ -65,7 +68,6 @@
         gap: var(--lg);
         align-items: center;
         padding: var(--xl) 0px;
-        text-align: center;
     }
     #meet_rabeen_title {
         font-size: 2.5em;
@@ -73,6 +75,7 @@
     @media (width >= 768px) {
         #about_section {
             padding: var(--tb);
+            gap: var(--tb);
         }
         #about_us_content {
             padding: var(--sm) var(--xl) var(--xl);
@@ -92,11 +95,11 @@
     }
     @media (width >= 1440px) {
         #about_section {
-            padding: var(--dt);
+            padding: var(--tb) var(--dt);
         }
         #about_us_content {
             max-width: 40%;
-            padding: 0px var(--tb) var(--lg);
+            padding: var(--sm) var(--tb) var(--tb);
         }
         #meet_rabeen_text {
             max-width: 65%;
